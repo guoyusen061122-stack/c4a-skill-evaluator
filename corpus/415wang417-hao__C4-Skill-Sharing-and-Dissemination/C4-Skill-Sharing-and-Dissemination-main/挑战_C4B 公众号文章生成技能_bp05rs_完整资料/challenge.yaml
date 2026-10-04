@@ -1,0 +1,14 @@
+# C4B 结构化课程定义（由 freeze-course-content.mjs 生成，v1.0 冻结）
+id: C4B
+title: "公众号文章生成技能（WeChat Article Pipeline Skill）"
+difficulty: 
+brief: "构建一个公众号文章生成技能，产出可发布的文章并拿到真实阅读数据。"
+objective:
+  - "构建公众号文章生成技能"
+  - "产出结构与观点俱佳的文章"
+  - "完成真实发布"
+  - "用数据复盘传播效果"
+deliverables_pattern: "*wechat-publisher*,*文章链接*,*AI日志*"
+deadline: 2026-12-31T23:59
+platform_challenge_id: ch-20260717031440-bp05rs
+source_md: CHALLENGE.md

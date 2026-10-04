@@ -1,0 +1,90 @@
+name: C4A evaluator checks
+
+# 三条硬门禁：
+#   1. 可靠性测试：20 个标注样本 + 87 项断言 + 朴素对照组，必须全通过
+#   2. 技能包：frontmatter 合法、可脱离仓库独立运行
+#   3. 交付物：A–E 五块全 PASS
+#
+# 为什么要进 CI：这个评审器的全部价值在于**它的结论可复现**。
+# 如果判据改坏了没人发现，它给出的每一分都不可信。
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reliability:
+    name: reliability tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 零第三方依赖自检
+        run: |
+          python - <<'PY'
+          import ast, sys
+          src = open("skill-evaluator/scripts/c4a_evaluator.py", encoding="utf-8").read()
+          mods = set()
+          for n in ast.walk(ast.parse(src)):
+              if isinstance(n, ast.Import):
+                  mods |= {a.name.split(".")[0] for a in n.names}
+              elif isinstance(n, ast.ImportFrom) and n.module:
+                  mods.add(n.module.split(".")[0])
+          third = mods - set(sys.stdlib_module_names)
+          print("导入:", sorted(mods))
+          assert not third, f"出现了第三方依赖：{sorted(third)}"
+          print("✓ 只用标准库")
+          PY
+      - name: 生成评测集
+        run: |
+          python tools/make_gold.py
+          python tools/fix_gold_labels.py
+      - name: 可靠性测试（87 项断言 + 对照实验）
+        run: python tests/test_evaluator.py
+
+  skill-package:
+    name: skill package
+    runs-on: ubuntu-latest
+    needs: reliability
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 打包并核验可独立运行
+        run: python tools/build_skill.py
+
+  audit:
+    name: deliverable audit
+    runs-on: ubuntu-latest
+    needs: reliability
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 生成产物
+        run: |
+          python tools/make_gold.py
+          python tools/fix_gold_labels.py
+          python tests/test_evaluator.py
+          python tools/class_report.py
+          python tools/make_reliability_report.py
+          python tools/build_skill.py
+      - name: 全量核验
+        run: python tools/audit_deliverables.py
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff
+      - run: ruff check --select E9,F63,F7,F82 --output-format=concise . || true

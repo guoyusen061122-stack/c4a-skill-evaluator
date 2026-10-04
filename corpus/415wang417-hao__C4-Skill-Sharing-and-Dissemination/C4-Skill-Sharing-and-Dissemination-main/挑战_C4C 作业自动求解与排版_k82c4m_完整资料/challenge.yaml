@@ -1,0 +1,14 @@
+# C4C 结构化课程定义（由 freeze-course-content.mjs 生成，v1.0 冻结）
+id: C4C
+title: "构建作业自动求解与排版系统，正确率与输出质量都要过硬。"
+difficulty: 
+brief: "构建作业自动求解与排版系统，正确率与输出质量都要过硬。"
+objective:
+  - "实现可核验的自动求解器"
+  - "输出排版规范的答案"
+  - "处理边界情况并评估正确率"
+  - "沉淀为可复用技能"
+deliverables_pattern: "*方案设计*,*homework-solver*,*output*,*AI日志*"
+deadline: 2026-12-31T23:59
+platform_challenge_id: ch-20260717031447-k82c4m
+source_md: CHALLENGE.md

@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "note": "每一条必交规则都标注来源。未收录的挑战（C3/C5/C6/C7）不做齐全性判定，只做通用检查——宁可说不知道，也不臆造规则。",
+  "challenges": {
+    "C1": {
+      "verified": true,
+      "source": "eduseed prepare-submission 实测返回的 requiredPatterns（2026-09-28，C1 提交前）",
+      "required": [
+        { "label": "自述 / 说明文档", "include": ["(^|/)README\\.md$"], "min": 1 },
+        { "label": "AI 协作日志", "include": ["AI日志.*\\.md$"], "min": 1 },
+        { "label": "AAR 复盘", "include": ["AAR.*\\.md$"], "min": 1 },
+        { "label": "拿来说明", "include": ["拿来说明.*\\.md$"], "min": 1 }
+      ]
+    },
+    "C2": {
+      "verified": true,
+      "source": "eduseed prepare-submission 实测返回的 requiredPatterns（2026-09-29，C2 提交前）",
+      "required": [
+        { "label": "论文 LaTeX 源文件", "include": ["paper\\.tex$"], "min": 1 },
+        { "label": "参考文献 bib", "include": ["references\\.bib$"], "min": 1 },
+        { "label": "AI 协作日志", "include": ["AI日志.*\\.md$"], "min": 1 },
+        { "label": "AAR 复盘", "include": ["AAR.*\\.md$"], "min": 1 }
+      ]
+    },
+    "C3": { "verified": false, "source": "未收录", "required": [] },
+    "C4": {
+      "verified": true,
+      "source": "CHALLENGE.md 第四节『文件与命名』第 44–50 行 + 第 292–298 行上传清单",
+      "namePrefixed": true,
+      "ignorePaths": ["skill_src/**"],
+      "required": [
+        { "label": "Skill 说明文档", "include": ["_C4_skill说明\\.md$"], "min": 1 },
+        {
+          "label": "可执行内容（.skill / .py / .md）",
+          "include": ["_C4_.*\\.skill$", "_C4_.*\\.py$", "_C4_.*\\.md$"],
+          "exclude": ["_C4_skill说明\\.md$", "_C4_教学说明\\.md$", "_C4_AI日志\\.md$", "_C4_AAR\\.md$"],
+          "min": 1
+        },
+        { "label": "Demo（截图 .png 或视频 .mp4）", "include": ["_C4_demo.*\\.(png|jpg|jpeg|mp4|gif)$"], "min": 1 },
+        { "label": "教学说明", "include": ["_C4_教学说明\\.md$"], "min": 1 },
+        { "label": "AI 日志", "include": ["_C4_AI日志\\.md$"], "min": 1 }
+      ]
+    },
+    "C5": { "verified": false, "source": "未收录", "required": [] },
+    "C6": { "verified": false, "source": "未收录", "required": [] },
+    "C7": { "verified": false, "source": "未收录", "required": [] }
+  },
+  "placeholders": ["TODO", "FIXME", "XXX", "待补充", "待填写", "待填", "待确认", "待定", "待办", "占位", "暂略", "略过", "lorem ipsum", "此处省略", "（此处"],
+  "junk": [".git", ".scratch", "node_modules", "__pycache__", ".venv", "venv", "Thumbs.db", ".DS_Store", "desktop.ini", ".pytest_cache"],
+  "textExt": [".md", ".txt", ".py", ".json", ".yaml", ".yml", ".js", ".ts", ".html", ".css", ".tex", ".csv", ".bib"],
+  "placeholderMaxBytes": 3000000
+}

@@ -1,0 +1,11 @@
+# 术语一致性规则表（doc-consistency-auditor 支持的极简 YAML 子集）
+# 每条规则：standard = 标准写法；forbidden = 出现即报告为错误的禁用/别名写法（大小写敏感）
+rules:
+  - standard: "GitHub"
+    forbidden: ["github", "Github", "GH"]
+  - standard: "Markdown"
+    forbidden: ["markdown", "md 文档"]
+  - standard: "术语表"
+    forbidden: ["词汇表", "glossary 表"]
+  - standard: "AAR"
+    forbidden: ["aar", "a.a.r"]

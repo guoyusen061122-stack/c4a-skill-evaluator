@@ -1,0 +1,14 @@
+# C4D 结构化课程定义（由 freeze-course-content.mjs 生成，v1.0 冻结）
+id: C4D
+title: "本地大模型 Agent 技能（Local LLM Agent Skills with Gemma 4）"
+difficulty: 
+brief: "在本地跑通一个大模型 Agent 技能，让 Agent 具备真实可用的能力。"
+objective:
+  - "完成本地大模型部署"
+  - "构建具备记忆与技能的 Agent"
+  - "验证 Agent 能力可用"
+  - "对比本地与云端方案的取舍"
+deliverables_pattern: "*Agent技能*,*demo*,*AI日志*,*AAR*"
+deadline: 2026-12-31T23:59
+platform_challenge_id: ch-20260717031455-uzqs9k
+source_md: CHALLENGE.md

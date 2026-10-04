@@ -1,0 +1,181 @@
+{
+  "version": "1.0.0",
+  "challenge": "C4",
+  "challenge_title": "技能分享与传播",
+  "note": "本文件是评审器的**唯一规则来源**。改这里就能改评分行为，不需要动代码。所有 pattern 都是 Python 正则，在 UTF-8 归一化后的文本上匹配。",
+
+  "deliverables": {
+    "skill_doc": {
+      "label": "Skill 说明文档",
+      "required": true,
+      "filename_patterns": ["skill\\s*说明", "skill[_\\-]?doc", "skill[_\\-]?description", "技能说明", "说明文档"],
+      "extensions": [".md", ".txt", ".pdf", ".docx"],
+      "content_signals": ["使用场景", "解决什么问题", "输入", "输出", "use case", "input", "output"]
+    },
+    "executable": {
+      "label": "可执行内容",
+      "required": true,
+      "filename_patterns": ["\\.skill$", "技能", "skill", "workflow", "pipeline"],
+      "extensions": [".skill", ".py", ".js", ".sh", ".md", ".zip"],
+      "content_signals": ["```", "def ", "class ", "import ", "^---", "workflow", "步骤"]
+    },
+    "demo": {
+      "label": "Demo（视频/截图）",
+      "required": true,
+      "filename_patterns": ["demo", "演示", "截图", "screen", "录屏", "录制", "example"],
+      "extensions": [".mp4", ".mov", ".webm", ".png", ".jpg", ".jpeg", ".gif"],
+      "content_signals": [],
+      "binary": true
+    },
+    "teaching": {
+      "label": "教学说明",
+      "required": true,
+      "filename_patterns": ["教学说明", "教学", "教程", "tutorial", "teaching", "上手指南", "quickstart", "how-?to"],
+      "extensions": [".md", ".txt", ".pdf", ".docx"],
+      "content_signals": ["上手", "步骤", "常见坑", "踩坑", "安装", "注意事项", "getting started", "step by step"]
+    },
+    "ai_log": {
+      "label": "AI 日志",
+      "required": true,
+      "filename_patterns": ["AI\\s*日志", "AI[_\\-]?log", "AI使用", "ai_use", "对话记录"],
+      "extensions": [".md", ".txt", ".pdf", ".docx"],
+      "content_signals": ["使用的\\s*AI", "AI\\s*工具", "prompt", "提示词", "迭代", "轮次", "ChatGPT", "Claude", "DeepSeek", "Cursor", "Copilot"]
+    }
+  },
+
+  "conditions": {
+    "reusable": {
+      "label": "可复用",
+      "label_en": "Reusable",
+      "weight": 0.25,
+      "question": "别人拿过去能直接用吗？会不会绑死在作者的机器上？",
+      "checks": [
+        {"id": "R1", "anchor": true, "label": "有安装步骤或环境要求说明", "type": "present",
+         "patterns": ["安装步骤", "环境要求", "前置条件", "依赖", "requirements", "pip install", "npm install", "prerequisite", "getting started"], "weight": 1.0},
+        {"id": "R2", "label": "无硬编码的绝对路径", "type": "absent",
+         "patterns": ["[A-Za-z]:\\\\Users\\\\", "/Users/[A-Za-z]", "/home/[a-z]{2,}/", "C:\\\\Users\\\\", "/mnt/[a-z]/"], "weight": 1.0,
+         "note": "命中即扣分；这是可复用性最常见的破坏方式"},
+        {"id": "R3", "label": "无明文密钥/口令", "type": "absent",
+         "patterns": ["sk-[A-Za-z0-9]{16,}", "api[_-]?key\\s*[:=]\\s*[\"'][^\"']{8,}", "password\\s*[:=]\\s*[\"'][^\"']{3,}", "BEGIN [A-Z ]*PRIVATE KEY"], "weight": 1.0},
+        {"id": "R4", "label": "列明了依赖或兼容性", "type": "present",
+         "patterns": ["依赖", "dependencies", "requirements", "兼容", "compatible", "Python 3", "Node", "版本要求", "无需安装", "stdlib", "标准库"], "weight": 0.8},
+        {"id": "R5", "label": "说明了平台/运行环境", "type": "present",
+         "patterns": ["Windows", "macOS", "Linux", "跨平台", "跨系统", "操作系统", "浏览器", "Chrome"], "weight": 0.6},
+        {"id": "R6", "label": "给出了可直接复制的使用示例", "type": "present",
+         "patterns": ["```"], "weight": 0.8, "min_occurrences": 1}
+      ]
+    },
+
+    "executable": {
+      "label": "可执行",
+      "label_en": "Executable",
+      "weight": 0.25,
+      "question": "交付的是能跑的东西，还是只有一段说明？",
+      "checks": [
+        {"id": "E1", "anchor": true, "label": "包含可运行代码或可安装技能包", "type": "file_extension",
+         "extensions": [".py", ".js", ".sh", ".skill", ".zip"], "weight": 1.0},
+        {"id": "E2", "label": "SKILL 包有合法 frontmatter", "type": "frontmatter",
+         "required_keys": ["name", "description"], "weight": 1.0,
+         "applicable_extensions": [".md", ".skill"]},
+        {"id": "E3", "label": "有明确执行入口", "type": "present",
+         "patterns": ["if __name__", "def main", "python\\s+\\S+\\.py", "\\.skill", "运行方式", "使用方法", "usage", "命令行"], "weight": 0.8},
+        {"id": "E4", "label": "有分步骤的工作流", "type": "present",
+         "patterns": ["^#{2,4}\\s*Step", "步骤\\s*[1-9一二三四五六七八九]", "^\\s*[1-9]\\.\\s", "工作流", "workflow"], "weight": 0.8},
+        {"id": "E5", "label": "语法自检通过（.py 可编译）", "type": "py_compiles", "weight": 1.0},
+        {"id": "E6", "label": "说明了边界情况的处理", "type": "present",
+         "patterns": ["边界", "edge case", "异常", "失败", "错误处理", "如果.*为空", "空文件夹", "容错"], "weight": 0.6}
+      ]
+    },
+
+    "verifiable": {
+      "label": "可验证",
+      "label_en": "Verifiable",
+      "weight": 0.25,
+      "question": "给定输入 X，能不能判断它成功还是失败？",
+      "checks": [
+        {"id": "V1", "anchor": true, "label": "有测试用例或自检脚本", "type": "present",
+         "patterns": ["测试", "test", "自检", "回归", "pytest", "assert"], "weight": 1.0},
+        {"id": "V2", "label": "给出了预期输出或真实运行结果", "type": "present",
+         "patterns": ["预期", "expected", "输出如下", "运行结果", "实测", "验证通过", "✅\\s*\\d+/\\d+"], "weight": 1.0},
+        {"id": "V3", "label": "有明确的成功/失败判定标准", "type": "present",
+         "patterns": ["判定", "通过标准", "pass", "fail", "成功.*条件", "退出码", "exit code", "命中"], "weight": 0.9},
+        {"id": "V4", "label": "Demo 展示的是真实结果而非示意图", "type": "demo_evidence", "weight": 0.8,
+         "note": "有截图/录屏文件，且文件名或邻近文档里提到它是真实运行结果"},
+        {"id": "V5", "label": "对关键行为做了断言/校验", "type": "present",
+         "patterns": ["assert", "断言", "期望", "应当", "必须", "校验"], "weight": 0.7}
+      ]
+    },
+
+    "clear_io": {
+      "label": "IO 明确",
+      "label_en": "Clear I/O",
+      "weight": 0.25,
+      "question": "一句话能不能说清「输入什么，输出什么」？",
+      "checks": [
+        {"id": "I1", "anchor": true, "label": "有「输入 X，输出 Y」式的一句话说明", "type": "io_statement", "weight": 1.2},
+        {"id": "I2", "label": "输入的类型/格式写清楚了", "type": "present",
+         "patterns": ["输入", "input", "接受", "传入", "给定"], "weight": 0.8},
+        {"id": "I3", "label": "输出的类型/格式写清楚了", "type": "present",
+         "patterns": ["输出", "output", "返回", "生成", "产出", "produces", "returns", "generates"], "weight": 0.8},
+        {"id": "I4", "label": "说明了输入不满足要求时怎么办", "type": "present",
+         "patterns": ["未找到", "找不到", "如果.*没有", "缺失", "提示", "跳过"], "weight": 0.5}
+      ]
+    }
+  },
+
+  "red_flags": {
+    "note": "红旗是**结构性缺陷**：不管其他维度多好看，有这类缺陷的提交都不应该拿高分。cap 表示复合分的上限（0–100）。cap_table 允许按命中数量分级 —— 缺 1 个交付物和缺 4 个不是一回事。这些数值不是拍的，是在 tests/gold 标注集上校准出来的（见 可靠性测试报告）。",
+    "items": [
+      {"id": "empty_deliverable", "label": "必交交付物是空文件/占位文件", "severity": "high",
+       "cap_table": [[3, 25], [2, 40], [1, 60]], "note": "只对**被匹配到必交槽位**的空文件报警。演示目录里的占位符不算。按空文件数量分级。"},
+      {"id": "missing_core", "label": "核心交付物缺失", "severity": "high",
+       "cap_table": [[3, 45], [2, 60], [1, 75]],
+       "note": "按缺失数量分级：缺 3 个以上 → 上限 45；缺 2 个 → 60；缺 1 个 → 75。"},
+      {"id": "keyword_stuffing", "label": "疑似关键词堆砌", "severity": "high",
+       "cap": 60},
+      {"id": "hardcoded_path", "label": "硬编码绝对路径", "severity": "medium",
+       "cap": 85},
+      {"id": "secret_leak", "label": "疑似明文密钥", "severity": "high",
+       "cap": 50},
+      {"id": "syntax_error", "label": "附带的 Python 文件无法编译", "severity": "medium",
+       "cap": 85}
+    ]
+  },
+
+  "propagation": {
+    "label": "传播证据",
+    "note": "C4 原文把「被使用次数」列为最高权重，但平台 rubric.json 里没有对应维度。本评审器单独报告这一块，且**只报证据、不臆断**：仓库里没有使用回执 ≠ 没被用过（群聊里用了不会留下文件）。",
+    "evidence_patterns": [
+      "使用回执", "反馈", "采纳", "被.*使用", "user feedback", "有人用", "同学试用",
+      "used by", "issue", "star", "fork", "下载量", "回填", "试用反馈", "评价"
+    ],
+    "statuses": {
+      "evidenced": "在提交里找到使用/反馈的书面证据",
+      "self_reported": "只有作者自述有人用过，但没有第三方痕迹",
+      "not_evidenced": "没有找到任何传播证据（**不等于没传播**）"
+    }
+  },
+
+  "anchor_rule": "锚点检查（带 anchor:true 的项）是所在条件的**核心**。锚点不通过时该条件分数封顶 0.5 —— 否则「IO 明确」这一整个条件里少一条最关键的话，只值 5 个百分点，与 C4 把四条件并列的意图不符。",
+  "scoring": {
+    "completeness": "命中必交交付物数 / 必交总数",
+    "quality": "四个条件的加权平均（各条件内按其 checks 的权重归一）",
+    "composite_formula": "completeness * 0.4 + quality * 0.6",
+    "completeness_weight": 0.4,
+    "quality_weight": 0.6,
+    "levels": [
+      {"min": 0.85, "code": "L4", "label": "完善"},
+      {"min": 0.70, "code": "L3", "label": "良好"},
+      {"min": 0.50, "code": "L2", "label": "及格"},
+      {"min": 0.00, "code": "L1", "label": "待改进"}
+    ],
+    "negation_gate": {
+      "enabled": true,
+      "window": 8,
+      "markers": ["没有", "无", "未", "缺", "不含", "不支持", "尚未", "不存在", "not ", "no ", "without", "missing"],
+      "note": "中文里「没有测试」会命中「测试」。命中点前 window 个字符内出现否定词时，该次命中作废。"
+    },
+    "weak_hit_discount": 0.5,
+    "weak_hit_max_distance": 40
+  }
+}

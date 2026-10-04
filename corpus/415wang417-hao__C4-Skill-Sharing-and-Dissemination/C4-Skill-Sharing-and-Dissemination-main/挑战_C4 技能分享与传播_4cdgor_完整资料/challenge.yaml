@@ -1,0 +1,14 @@
+# C4 结构化课程定义（由 freeze-course-content.mjs 生成，v1.0 冻结）
+id: C4
+title: "技能分享与传播（Skill Sharing & Propagation）"
+difficulty: 
+brief: "把一个能力封装成可分享、可教会的技能并传播给同学。"
+objective:
+  - "封装一个定义清晰、可执行的技能"
+  - "产出教学文档与示例"
+  - "完成一次技能分享/传播"
+  - "收集反馈并迭代技能"
+deliverables_pattern: "*skill说明*,*.skill,*教学说明*,*demo*,*AI日志*"
+deadline: 2026-12-31T23:59
+platform_challenge_id: ch-20260717031424-4cdgor
+source_md: CHALLENGE.md

@@ -1,0 +1,13 @@
+{
+  "challenge_id": "ch-20260717031455-uzqs9k",
+  "title": "C4D 本地大模型 Agent 技能",
+  "brief": "🔥 C4 的硬核分支——不依赖云端 API，在你自己的电脑上跑大模型，驱动 Agent 技能。",
+  "objective": "- 完成本地大模型部署\n- 构建具备记忆与技能的 Agent\n- 验证 Agent 能力可用\n- 对比本地与云端方案的取舍",
+  "deliverables": "*Agent技能*,*demo*,*AI日志*,*AAR*",
+  "rubric": "agentCapability Agent能力（25分）：所构建 Agent 的能力完整度与可用性\ntechnicalExecution 技术实现（20分）：技术方案合理性与工程质量\nartifactCompleteness 产物完整性（15分）：交付物是否齐全、可运行、可独立使用\naiUsage AI使用质量（20分）：AI 工具使用是否恰当、有效、可追溯\nreflectionQuality 复盘质量（20分）：AAR 反思是否深入、有洞察、有改进方案",
+  "rubric_dimensions": "{\"version\":1,\"challenge_id\":\"C4D\",\"totalPoints\":100,\"dimensions\":[{\"id\":\"agentCapability\",\"label\":\"Agent能力\",\"description\":\"所构建 Agent 的能力完整度与可用性\",\"signals\":[\"功能可用\",\"有记忆\",\"有技能\"],\"negativeSignals\":[\"空壳\",\"跑不通\"],\"maxPoints\":25},{\"id\":\"technicalExecution\",\"label\":\"技术实现\",\"description\":\"技术方案合理性与工程质量\",\"signals\":[\"代码规范\",\"Git提交清晰\",\"架构设计\"],\"negativeSignals\":[\"硬编码\",\"代码混乱\",\"无法运行\"],\"maxPoints\":20},{\"id\":\"artifactCompleteness\",\"label\":\"产物完整性\",\"description\":\"交付物是否齐全、可运行、可独立使用\",\"signals\":[\"README齐全\",\"可运行\",\"安装/使用说明\"],\"negativeSignals\":[\"文件为空\",\"缺少核心交付物\"],\"maxPoints\":15},{\"id\":\"aiUsage\",\"label\":\"AI使用质量\",\"description\":\"AI 工具使用是否恰当、有效、可追溯\",\"signals\":[\"多轮迭代\",\"prompt优化\",\"工作流设计\",\"AI日志佐证\"],\"negativeSignals\":[\"一句话指令直接提交\",\"没有AI使用记录\"],\"maxPoints\":20},{\"id\":\"reflectionQuality\",\"label\":\"复盘质量\",\"description\":\"AAR 反思是否深入、有洞察、有改进方案\",\"signals\":[\"具体问题分析\",\"有改进方案\",\"记录迭代过程\",\"含失败经验\"],\"negativeSignals\":[\"敷衍了事\",\"没有实际反思\"],\"maxPoints\":20}]}",
+  "red_flags": "{\"flags\":[{\"id\":\"missing_artifacts\",\"description\":\"核心交付物缺失\",\"affectedDimension\":\"artifactCompleteness\",\"maxScore\":5},{\"id\":\"no_ai_log\",\"description\":\"无 AI 使用记录/AAR\",\"affectedDimension\":\"reflectionQuality\",\"maxScore\":5},{\"id\":\"one_shot_ai\",\"description\":\"一句话指令直接提交、无迭代\",\"affectedDimension\":\"aiUsage\",\"maxScore\":5}]}",
+  "required_deliverables": "*Agent技能*,*demo*,*AI日志*,*AAR*",
+  "deadline": "2026-12-31T23:59",
+  "status": "published"
+}

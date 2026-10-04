@@ -1,0 +1,5956 @@
+{
+ "evaluator": "c4a-evaluator v1.0.0",
+ "n_repos": 8,
+ "n_authors": 8,
+ "failed_repos": [],
+ "submissions": [
+  {
+   "author": "ZhouYan05",
+   "author_source": "filename+single_author_repo",
+   "n_files": 17,
+   "n_text_files": 14,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "ZhouYan05_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 2 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+     "confidence": "high",
+     "why": [
+      "文件名命中 \\.skill$",
+      "扩展名 .skill",
+      "内容信号 4 个"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "ZhouYan05_C4_demo.md",
+     "confidence": "medium",
+     "why": [
+      "文件名命中 demo"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "ZhouYan05_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 1 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "ZhouYan05_C4_AI日志与AAR.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 1 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 26,
+         "match": "依赖"
+        },
+        {
+         "file": "ZhouYan05_C4_skill说明.md",
+         "line": 56,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 26,
+         "match": "依赖"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 59,
+         "match": "兼容"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 26,
+         "match": "标准库"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 33,
+         "match": "标准库"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 298,
+         "match": "node"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 214,
+         "match": "标准库"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_教学说明.md",
+         "line": 59,
+         "match": "Windows"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 48,
+         "match": "```"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 55,
+         "match": "```"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 124,
+         "match": "```"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 134,
+         "match": "```"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 158,
+         "match": "```"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 161,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill"
+        },
+        {
+         "file": "_demo\\after\\ZhouYan05_C4_deliverable-selfcheck.skill"
+        },
+        {
+         "file": "_demo\\before\\ZhouYan05_C4_deliverable-selfcheck.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "src\\deliverable-selfcheck\\SKILL.md",
+         "keys": [
+          "description",
+          "name"
+         ]
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 18,
+         "match": ".skill"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 20,
+         "match": ".skill"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 65,
+         "match": ".skill"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 78,
+         "match": ".skill"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 418,
+         "match": "if __name__"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 399,
+         "match": "def main"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 78,
+         "match": "1. "
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 79,
+         "match": "2. "
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 80,
+         "match": "3. "
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 81,
+         "match": "4. "
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 15,
+         "match": "1. "
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 19,
+         "match": "2. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 52,
+         "match": "失败"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 71,
+         "match": "边界"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 187,
+         "match": "失败"
+        },
+        {
+         "file": "ZhouYan05_C4_demo.md",
+         "line": 93,
+         "match": "失败"
+        },
+        {
+         "file": "ZhouYan05_C4_skill说明.md",
+         "line": 68,
+         "match": "边界"
+        },
+        {
+         "file": "ZhouYan05_C4_skill说明.md",
+         "line": 88,
+         "match": "边界"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 4,
+         "match": "自检"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 44,
+         "match": "自检"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 66,
+         "match": "自检"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 88,
+         "match": "自检"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "自检"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "自检"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 87,
+         "match": "实测"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 81,
+         "match": "实测"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 138,
+         "match": "实测"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 141,
+         "match": "实测"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 172,
+         "match": "实测"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 237,
+         "match": "实测"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 44,
+         "match": "退出码"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 53,
+         "match": "退出码"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "判定"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 24,
+         "match": "判定"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 41,
+         "match": "判定"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 149,
+         "match": "判定"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_demo.md",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 24,
+         "match": "必须"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 38,
+         "match": "必须"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 88,
+         "match": "校验"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 155,
+         "match": "必须"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 168,
+         "match": "必须"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 276,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "description: EduSeed/Elite20 课程挑战交付物自检器。当你要提交挑战作业、想知道\"我到底缺不缺交付物\"\"文件名对不对\"\"会不会被敏感信"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 26,
+         "match": "## 输入 / 输出契约"
+        },
+        {
+         "file": "ZhouYan05_C4_skill说明.md",
+         "line": 40,
+         "match": "输入一个目录 + 挑战要求的交付物清单,输出:"
+        },
+        {
+         "file": "src\\deliverable-selfcheck\\SKILL.md",
+         "line": 3,
+         "match": "description: EduSeed/Elite20 课程挑战交付物自检器。当你要提交挑战作业、想知道\"我到底缺不缺交付物\"\"文件名对不对\"\"会不会被敏感信"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "输入"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 26,
+         "match": "输入"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 28,
+         "match": "输入"
+        },
+        {
+         "file": "ZhouYan05_C4_skill说明.md",
+         "line": 40,
+         "match": "输入"
+        },
+        {
+         "file": "ZhouYan05_C4_skill说明.md",
+         "line": 61,
+         "match": "输入"
+        },
+        {
+         "file": "ZhouYan05_C4_教学说明.md",
+         "line": 117,
+         "match": "输入"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 26,
+         "match": "输出"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 79,
+         "match": "返回"
+        },
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 88,
+         "match": "返回"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "输出"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 26,
+         "match": "输出"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 37,
+         "match": "输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "ZhouYan05_C4_AI日志与AAR.md",
+         "line": 70,
+         "match": "缺失"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 5,
+         "match": "缺失"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 13,
+         "match": "缺失"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 41,
+         "match": "缺失"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 99,
+         "match": "缺失"
+        },
+        {
+         "file": "ZhouYan05_C4_deliverable-selfcheck.skill",
+         "line": 105,
+         "match": "缺失"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 1.0,
+   "composite_raw": 1.0,
+   "flag_cap": 1.0,
+   "composite": 1.0,
+   "level": "L4",
+   "red_flags": [],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "ZhouYan05_C4_AI日志与AAR.md",
+      "line": 71,
+      "match": "反馈"
+     },
+     {
+      "file": "ZhouYan05_C4_AI日志与AAR.md",
+      "line": 80,
+      "match": "反馈"
+     },
+     {
+      "file": "ZhouYan05_C4_AI日志与AAR.md",
+      "line": 16,
+      "match": "采纳"
+     },
+     {
+      "file": "ZhouYan05_C4_AI日志与AAR.md",
+      "line": 17,
+      "match": "采纳"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 22,
+    "chars": 2517,
+    "headings": 9,
+    "fences": 3,
+    "list_items": 17,
+    "structure_items": 38,
+    "structure_to_signal_ratio": 1.727,
+    "file": "ZhouYan05_C4_skill说明.md"
+   },
+   "_repo": "ZhouYan05__C4_deliverable"
+  },
+  {
+   "author": "苗文馨",
+   "author_source": "filename",
+   "n_files": 9,
+   "n_text_files": 6,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "苗文馨_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 4 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "苗文馨_C4_demo截图1_缺漏检出.png",
+     "confidence": "high",
+     "why": [
+      "文件名命中 demo",
+      "扩展名 .png"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "苗文馨_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 2 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "苗文馨_C4_AI日志.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 5 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 85,
+         "match": "依赖"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 33,
+         "match": "依赖"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 38,
+         "match": "Prerequisite"
+        },
+        {
+         "file": "苗文馨_C4_skill说明.md",
+         "line": 24,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 85,
+         "match": "依赖"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 76,
+         "match": "兼容"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 33,
+         "match": "依赖"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 58,
+         "match": "兼容"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 33,
+         "match": "Python 3"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 40,
+         "match": "Python 3"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 84,
+         "match": "Windows"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 144,
+         "match": "Windows"
+        },
+        {
+         "file": "苗文馨_C4_skill说明.md",
+         "line": 24,
+         "match": "Windows"
+        },
+        {
+         "file": "苗文馨_C4_skill说明.md",
+         "line": 24,
+         "match": "macOS"
+        },
+        {
+         "file": "苗文馨_C4_skill说明.md",
+         "line": 24,
+         "match": "Linux"
+        },
+        {
+         "file": "苗文馨_C4_教学说明.md",
+         "line": 14,
+         "match": "Windows"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 27,
+         "match": "```"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 32,
+         "match": "```"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 48,
+         "match": "```"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 54,
+         "match": "```"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 69,
+         "match": "```"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 75,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_deliverable-checker.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "keys": [
+          "description",
+          "name"
+         ]
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 20,
+         "match": ".skill"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 50,
+         "match": ".skill"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 73,
+         "match": ".skill"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 74,
+         "match": ".skill"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 76,
+         "match": ".skill"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 70,
+         "match": "python deliverable_checker.py"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 100,
+         "match": "1. "
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 101,
+         "match": "2. "
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 104,
+         "match": "1. "
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 105,
+         "match": "2. "
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 106,
+         "match": "3. "
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 29,
+         "match": "工作流"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 12,
+         "match": "边界"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 12,
+         "match": "边界"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 29,
+         "match": "边界"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 51,
+         "match": "边界"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 53,
+         "match": "边界"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 56,
+         "match": "边界"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 12,
+         "match": "测试"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 53,
+         "match": "测试"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 56,
+         "match": "测试"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 58,
+         "match": "测试"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 80,
+         "match": "测试"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 80,
+         "match": "测试"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 11,
+         "match": "实测"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 37,
+         "match": "实测"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 42,
+         "match": "实测"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 76,
+         "match": "实测"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 100,
+         "match": "实测"
+        },
+        {
+         "file": "苗文馨_C4_skill说明.md",
+         "line": 60,
+         "match": "实测"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 44,
+         "match": "退出码"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 62,
+         "match": "退出码"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 65,
+         "match": "退出码"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 110,
+         "match": "退出码"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 152,
+         "match": "判定"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 77,
+         "match": "退出码"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_demo截图1_缺漏检出.png",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 23,
+         "match": "必须"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 44,
+         "match": "必须"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 61,
+         "match": "必须"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 154,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 56,
+         "match": "> \"针对 SKILL.md 里列的 8 种边界情况,逐一构造输入验证,输出测试矩阵\""
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 35,
+         "match": "- 可验证:给定同样的输入,永远得到同样的报告;缺东西时退出码非 0"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 36,
+         "match": "- IO 明确:输入两个文件夹路径,输出一份报告"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_rubric-guide.md",
+         "line": 32,
+         "match": "1. **确定性优先**:所有判断都是通配符匹配和正则,同样的输入永远得到同样的输出——"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 56,
+         "match": "输入"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 29,
+         "match": "输入"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 35,
+         "match": "输入"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 36,
+         "match": "输入"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 42,
+         "match": "Input"
+        },
+        {
+         "file": "苗文馨_C4_deliverable-checker_SKILL.md",
+         "line": 67,
+         "match": "input"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 56,
+         "match": "输出"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 66,
+         "match": "输出"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 79,
+         "match": "输出"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 109,
+         "match": "输出"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 34,
+         "match": "生成"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 92,
+         "match": "产出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 79,
+         "match": "找不到"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 43,
+         "match": "缺失"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 64,
+         "match": "缺失"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 66,
+         "match": "缺失"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 62,
+         "match": "提示"
+        },
+        {
+         "file": "苗文馨_C4_AI日志.md",
+         "line": 65,
+         "match": "提示"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 1.0,
+   "composite_raw": 1.0,
+   "flag_cap": 1.0,
+   "composite": 1.0,
+   "level": "L4",
+   "red_flags": [],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "苗文馨_C4_AI日志.md",
+      "line": 23,
+      "match": "被使用"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 30,
+    "chars": 3112,
+    "headings": 8,
+    "fences": 1,
+    "list_items": 11,
+    "structure_items": 28,
+    "structure_to_signal_ratio": 0.933,
+    "file": "苗文馨_C4_AI日志.md"
+   },
+   "_repo": "MengXinzhi__c4-skill-share"
+  },
+  {
+   "author": "WangChunYan",
+   "author_source": "filename+single_author_repo",
+   "n_files": 10,
+   "n_text_files": 9,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "WangChunYan_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 6 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "aar-report-generator\\SKILL.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "WangChunYan_C4_demo.md",
+     "confidence": "medium",
+     "why": [
+      "文件名命中 demo"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "WangChunYan_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "WangChunYan_C4_AI日志.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 5 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 24,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 51,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 107,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 134,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 51,
+         "match": "pip install"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 83,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 24,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 51,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 107,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 134,
+         "match": "依赖"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 51,
+         "match": "标准库"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 107,
+         "match": "标准库"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 63,
+         "match": "Windows"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 109,
+         "match": "Windows"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 125,
+         "match": "Windows"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 67,
+         "match": "跨平台"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 126,
+         "match": "跨平台"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 9,
+         "match": "Windows"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 18,
+         "match": "```"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 20,
+         "match": "```"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 24,
+         "match": "```"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 34,
+         "match": "```"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 42,
+         "match": "```"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 44,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_aar-report-generator.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "keys": [
+          "description",
+          "name"
+         ]
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 61,
+         "match": "python aar_report.py"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 31,
+         "match": ".skill"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 34,
+         "match": ".skill"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 99,
+         "match": ".skill"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 19,
+         "match": "python aar_report.py"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 43,
+         "match": "python aar_report.py"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 23,
+         "match": "1. "
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 24,
+         "match": "2. "
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 25,
+         "match": "3. "
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 26,
+         "match": "4. "
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 30,
+         "match": "1. "
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 31,
+         "match": "2. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 116,
+         "match": "失败"
+        },
+        {
+         "file": "WangChunYan_C4_skill说明.md",
+         "line": 157,
+         "match": "边界"
+        },
+        {
+         "file": "WangChunYan_C4_教学说明.md",
+         "line": 106,
+         "match": "失败"
+        },
+        {
+         "file": "WangChunYan_C4_教学说明.md",
+         "line": 150,
+         "match": "失败"
+        },
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "line": 91,
+         "match": "Edge Case"
+        },
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "line": 94,
+         "match": "失败"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 0.7954545454545454,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 69,
+         "match": "测试"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 135,
+         "match": "测试"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 138,
+         "match": "测试"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 46,
+         "match": "自检"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 53,
+         "match": "自检"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 108,
+         "match": "自检"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 79,
+         "match": "expected"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 124,
+         "match": "验证通过"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 27,
+         "match": "预期"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 29,
+         "match": "预期"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 53,
+         "match": "预期"
+        },
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "line": 74,
+         "match": "预期"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_demo.md",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 24,
+         "match": "必须"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 67,
+         "match": "必须"
+        },
+        {
+         "file": "WangChunYan_C4_教学说明.md",
+         "line": 123,
+         "match": "必须"
+        },
+        {
+         "file": "WangChunYan_C4_教学说明.md",
+         "line": 131,
+         "match": "必须"
+        },
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "line": 74,
+         "match": "必须"
+        },
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "line": 140,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 34,
+         "match": "5. 打包 `.skill`、生成示例输入/输出、起草说明文档。"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 95,
+         "match": "**教训**:**新加一种输入格式时,要对照输出逐字段核对**,不能只看「能跑」就以为「对」。"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 99,
+         "match": "打包 `.skill`(zip 格式,与 `materials/` 里两个示例一致),生成样例输入/输出,写齐 5 个交付文档。"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 108,
+         "match": "| 脚本 | 「输入支持 JSON 和纯文本两种,输出固定 9 章结构,最后加一个深度自检自动打分」 |"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 24,
+         "match": "输入"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 34,
+         "match": "输入"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 52,
+         "match": "输入"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 71,
+         "match": "输入"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 95,
+         "match": "输入"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 99,
+         "match": "输入"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 25,
+         "match": "输出"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 34,
+         "match": "输出"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 53,
+         "match": "输出"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 63,
+         "match": "输出"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 87,
+         "match": "输出"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 95,
+         "match": "输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 87,
+         "match": "缺失"
+        },
+        {
+         "file": "WangChunYan_C4_AI日志.md",
+         "line": 125,
+         "match": "缺失"
+        },
+        {
+         "file": "WangChunYan_C4_教学说明.md",
+         "line": 149,
+         "match": "找不到"
+        },
+        {
+         "file": "WangChunYan_C4_教学说明.md",
+         "line": 42,
+         "match": "提示"
+        },
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "line": 61,
+         "match": "如果没有"
+        },
+        {
+         "file": "aar-report-generator\\SKILL.md",
+         "line": 96,
+         "match": "缺失"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 0.9488636363636364,
+   "composite_raw": 0.9693181818181819,
+   "flag_cap": 1.0,
+   "composite": 0.9693181818181819,
+   "level": "L4",
+   "red_flags": [],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "WangChunYan_C4_AI日志.md",
+      "line": 131,
+      "match": "评价"
+     },
+     {
+      "file": "WangChunYan_C4_demo.md",
+      "line": 58,
+      "match": "反馈"
+     },
+     {
+      "file": "WangChunYan_C4_demo.md",
+      "line": 108,
+      "match": "反馈"
+     },
+     {
+      "file": "WangChunYan_C4_demo.md",
+      "line": 143,
+      "match": "反馈"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 26,
+    "chars": 3647,
+    "headings": 18,
+    "fences": 0,
+    "list_items": 16,
+    "structure_items": 52,
+    "structure_to_signal_ratio": 2.0,
+    "file": "WangChunYan_C4_AI日志.md"
+   },
+   "_repo": "Lin-cube__c4-skill-share-aar-report-generator"
+  },
+  {
+   "author": "李瑞翔",
+   "author_source": "filename+single_author_repo",
+   "n_files": 16,
+   "n_text_files": 4,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "李瑞翔_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 4 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "李瑞翔_C4_word-format-rescue.skill",
+     "confidence": "high",
+     "why": [
+      "文件名命中 \\.skill$",
+      "扩展名 .skill",
+      "内容信号 6 个"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "李瑞翔_C4_demo1_排版前_乱格式.png",
+     "confidence": "high",
+     "why": [
+      "文件名命中 demo",
+      "扩展名 .png"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "李瑞翔_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 2 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "李瑞翔_C4_AI日志.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 0.8846153846153847,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_教学说明.md",
+         "line": 22,
+         "match": "pip install"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 63,
+         "match": "兼容"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 127,
+         "match": "兼容"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 62,
+         "match": "```"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 71,
+         "match": "```"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 42,
+         "match": "```"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 49,
+         "match": "```"
+        },
+        {
+         "file": "李瑞翔_C4_教学说明.md",
+         "line": 21,
+         "match": "```"
+        },
+        {
+         "file": "李瑞翔_C4_教学说明.md",
+         "line": 25,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 0.8076923076923078,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill"
+        },
+        {
+         "file": "materials\\skill-explainer.skill"
+        },
+        {
+         "file": "materials\\wechat-doc-mapper.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 72,
+         "match": "命令行"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 93,
+         "match": "命令行"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 37,
+         "match": ".skill"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 302,
+         "match": "if __name__"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 428,
+         "match": "if __name__"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 603,
+         "match": "if __name__"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 69,
+         "match": "1. "
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 70,
+         "match": "2. "
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 89,
+         "match": "1. "
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 91,
+         "match": "2. "
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 101,
+         "match": "1. "
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 102,
+         "match": "2. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 29,
+         "match": "边界"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 74,
+         "match": "边界"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 103,
+         "match": "边界"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 70,
+         "match": "失败"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 64,
+         "match": "边界"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 86,
+         "match": "边界"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 9,
+         "match": "测试"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 34,
+         "match": "测试"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 36,
+         "match": "测试"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 40,
+         "match": "测试"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 73,
+         "match": "测试"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 82,
+         "match": "测试"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 57,
+         "match": "实测"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 73,
+         "match": "实测"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 77,
+         "match": "实测"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 94,
+         "match": "实测"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 57,
+         "match": "实测"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 94,
+         "match": "判定"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 97,
+         "match": "判定"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 54,
+         "match": "命中"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 527,
+         "match": "命中"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 637,
+         "match": "命中"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_demo1_排版前_乱格式.png",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 31,
+         "match": "必须"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 64,
+         "match": "必须"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 102,
+         "match": "必须"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 92,
+         "match": "必须"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 196,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 40,
+         "match": "**为什么这样设计:** 没有可控的\"乱输入\",就没法验证输出是否正确——这是测试的基本功。"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 9,
+         "match": "**输入**一份格式乱的 docx 文档 + 一份格式要求,**输出**排好版的新文档 + 一张\"要求 vs 实际\"逐项验收对照表。"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 19,
+         "match": "这个技能把排版变成标准化流程:**先核对要求 → 诊断差距 → 列方案确认 → 逐项修改 → 机器验收打勾**。每一项要求都有落点、可追溯,而不是 AI 随口说"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 28,
+         "match": "## 输入 / 输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 38,
+         "match": "输入"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 110,
+         "match": "输入"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 76,
+         "match": "接受"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 9,
+         "match": "输入"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 28,
+         "match": "输入"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 32,
+         "match": "输入"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 40,
+         "match": "输出"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 85,
+         "match": "生成"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 28,
+         "match": "产出"
+        },
+        {
+         "file": "李瑞翔_C4_AI日志.md",
+         "line": 44,
+         "match": "产出"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 9,
+         "match": "输出"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 28,
+         "match": "输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 91,
+         "match": "提示"
+        },
+        {
+         "file": "李瑞翔_C4_skill说明.md",
+         "line": 91,
+         "match": "跳过"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 57,
+         "match": "提示"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 121,
+         "match": "提示"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 69,
+         "match": "跳过"
+        },
+        {
+         "file": "李瑞翔_C4_word-format-rescue.skill",
+         "line": 121,
+         "match": "跳过"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 0.9230769230769231,
+   "composite_raw": 0.9538461538461539,
+   "flag_cap": 1.0,
+   "composite": 0.9538461538461539,
+   "level": "L4",
+   "red_flags": [],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "李瑞翔_C4_word-format-rescue.skill",
+      "line": 264,
+      "match": "star"
+     },
+     {
+      "file": "李瑞翔_C4_word-format-rescue.skill",
+      "line": 476,
+      "match": "star"
+     },
+     {
+      "file": "李瑞翔_C4_教学说明.md",
+      "line": 50,
+      "match": "反馈"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 19,
+    "chars": 2811,
+    "headings": 12,
+    "fences": 0,
+    "list_items": 11,
+    "structure_items": 35,
+    "structure_to_signal_ratio": 1.842,
+    "file": "李瑞翔_C4_AI日志.md"
+   },
+   "_repo": "Raymond-Lao__c4-word-format-rescue"
+  },
+  {
+   "author": "阮如意",
+   "author_source": "filename",
+   "n_files": 6,
+   "n_text_files": 4,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "阮如意_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 4 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "阮如意_C4_challenge-preflight.skill",
+     "confidence": "high",
+     "why": [
+      "文件名命中 \\.skill$",
+      "扩展名 .skill"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "阮如意_C4_demo截图.png",
+     "confidence": "high",
+     "why": [
+      "文件名命中 demo",
+      "扩展名 .png"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "阮如意_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 2 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "阮如意_C4_AI日志.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 2 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 0.8846153846153847,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "依赖"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 10,
+         "match": "依赖"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 79,
+         "match": "依赖"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 17,
+         "match": "环境要求"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 20,
+         "match": "pip install"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "依赖"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "标准库"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "标准库"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 10,
+         "match": "依赖"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 79,
+         "match": "依赖"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 10,
+         "match": "Python 3"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 53,
+         "match": "```"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 55,
+         "match": "```"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 102,
+         "match": "```"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 109,
+         "match": "```"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 9,
+         "match": "```"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 11,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 0.8076923076923078,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_challenge-preflight.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 9,
+         "match": ".skill"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 39,
+         "match": ".skill"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 12,
+         "match": ".skill"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 23,
+         "match": ".skill"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 45,
+         "match": "python preflight.py"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 54,
+         "match": "python scripts/preflight.py"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 25,
+         "match": "1. "
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "2. "
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 27,
+         "match": "3. "
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 28,
+         "match": "4. "
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 45,
+         "match": "1. "
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 46,
+         "match": "2. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 11,
+         "match": "边界"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 64,
+         "match": "边界"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 72,
+         "match": "失败"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 27,
+         "match": "边界"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 54,
+         "match": "失败"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 0.7727272727272727,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "实测"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 27,
+         "match": "实测"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 51,
+         "match": "实测"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 84,
+         "match": "实测"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 58,
+         "match": "运行结果"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 70,
+         "match": "实测"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 27,
+         "match": "判定"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "PASS"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 38,
+         "match": "PASS"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 55,
+         "match": "PASS"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "FAIL"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 38,
+         "match": "FAIL"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_demo截图.png",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 77,
+         "match": "必须"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 96,
+         "match": "必须"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 63,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "| **实际结果** | 交付 `challenge-preflight` v1.0:输入交付目录,输出 `PASS/FAIL` + 行动项;纯标准库、离线、确"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "2. **确定性设计**:同目录同输入永远同输出,且只依赖标准库 —— 换台机器、断网也能跑,降低了别人用的门槛。"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 3,
+         "match": "> **一句话 IO**:**输入**一个挑战交付目录(加挑战编号),**输出**一份提交前自查报告(`PASS` / `FAIL` + 逐条行动项)。"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 38,
+         "match": "## 三、输入 / 输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "输入"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "输入"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 3,
+         "match": "输入"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 38,
+         "match": "输入"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 42,
+         "match": "输入"
+        },
+        {
+         "file": "阮如意_C4_skill说明.md",
+         "line": 81,
+         "match": "输入"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 18,
+         "match": "输出"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 26,
+         "match": "输出"
+        },
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 27,
+         "match": "返回"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 84,
+         "match": "返回"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 55,
+         "match": "生成"
+        },
+        {
+         "file": "阮如意_C4_AI日志.md",
+         "line": 12,
+         "match": "产出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "阮如意_C4_AAR.md",
+         "line": 37,
+         "match": "跳过"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 51,
+         "match": "提示"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 52,
+         "match": "提示"
+        },
+        {
+         "file": "阮如意_C4_教学说明.md",
+         "line": 66,
+         "match": "跳过"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 0.8662587412587412,
+   "composite_raw": 0.9197552447552447,
+   "flag_cap": 1.0,
+   "composite": 0.9197552447552447,
+   "level": "L4",
+   "red_flags": [],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "阮如意_C4_AAR.md",
+      "line": 57,
+      "match": "反馈"
+     },
+     {
+      "file": "阮如意_C4_AAR.md",
+      "line": 17,
+      "match": "被别人真正用起来**的技能 —— C4 评分里「技能质量」与「教学性」占大头,且传播链(被使用"
+     },
+     {
+      "file": "阮如意_C4_AAR.md",
+      "line": 19,
+      "match": "被别人用」的验证取决于他人实际使用,**本复盘不虚报使用"
+     },
+     {
+      "file": "阮如意_C4_AAR.md",
+      "line": 57,
+      "match": "回填"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 27,
+    "chars": 2812,
+    "headings": 9,
+    "fences": 2,
+    "list_items": 13,
+    "structure_items": 33,
+    "structure_to_signal_ratio": 1.222,
+    "file": "阮如意_C4_skill说明.md"
+   },
+   "_repo": "Leo-web-lhy__c4-skill-sharing"
+  },
+  {
+   "author": "lenovo",
+   "author_source": "filename",
+   "n_files": 5,
+   "n_text_files": 3,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "lenovo_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "lenovo_C4_smart-file-organizer.skill",
+     "confidence": "high",
+     "why": [
+      "文件名命中 \\.skill$",
+      "扩展名 .skill"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "lenovo_C4_demo.png",
+     "confidence": "high",
+     "why": [
+      "文件名命中 demo",
+      "扩展名 .png"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "lenovo_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "lenovo_C4_AI日志.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 0.8076923076923078,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 75,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 94,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 170,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 217,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 259,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 260,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [
+        {
+         "file": "lenovo_C4_教学说明.md",
+         "line": 184,
+         "match": "/Users/m"
+        },
+        {
+         "file": "lenovo_C4_教学说明.md",
+         "line": 238,
+         "match": "/Users/m"
+        }
+       ],
+       "note": "命中禁止模式"
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 75,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 94,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 170,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 217,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 259,
+         "match": "依赖"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 260,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 113,
+         "match": "Windows"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 113,
+         "match": "Windows"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 113,
+         "match": "跨平台"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 224,
+         "match": "Windows"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 228,
+         "match": "Windows"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 228,
+         "match": "Windows"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 235,
+         "match": "```"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 243,
+         "match": "```"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 92,
+         "match": "```"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 94,
+         "match": "```"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 98,
+         "match": "```"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 106,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_smart-file-organizer.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "keys": [
+          "aigc",
+          "contentproducer",
+          "contentpropagator",
+          "label",
+          "produceid",
+          "propagateid",
+          "reservedcode1",
+          "reservedcode2"
+         ]
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 34,
+         "match": ".skill"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 53,
+         "match": ".skill"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 69,
+         "match": ".skill"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 73,
+         "match": ".skill"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 79,
+         "match": ".skill"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 159,
+         "match": ".skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 251,
+         "match": "1. "
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 252,
+         "match": "2. "
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 253,
+         "match": "3. "
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 254,
+         "match": "4. "
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 258,
+         "match": "1. "
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 259,
+         "match": "2. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 129,
+         "match": "边界"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 185,
+         "match": "边界"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 199,
+         "match": "边界"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 208,
+         "match": "边界"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 218,
+         "match": "边界"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 77,
+         "match": "失败"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 34,
+         "match": "测试"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 38,
+         "match": "测试"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 52,
+         "match": "测试"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 133,
+         "match": "测试"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 137,
+         "match": "测试"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 154,
+         "match": "测试"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 150,
+         "match": "预期"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 52,
+         "match": "实测"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 52,
+         "match": "实测"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 131,
+         "match": "实测"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 139,
+         "match": "实测"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 141,
+         "match": "实测"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 187,
+         "match": "判定"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 226,
+         "match": "fail"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 209,
+         "match": "命中"
+        },
+        {
+         "file": "lenovo_C4_教学说明.md",
+         "line": 192,
+         "match": "fail"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_demo.png",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 74,
+         "match": "必须"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 165,
+         "match": "校验"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 213,
+         "match": "校验"
+        },
+        {
+         "file": "lenovo_C4_教学说明.md",
+         "line": 186,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 122,
+         "match": "- `SKILL.md`:包含 YAML frontmatter(`name` + `description`)、输入输出定义、工作流、策略说明、安全设计、使用"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 63,
+         "match": "## 三、输入输出(一句话说清)"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 122,
+         "match": "输入"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 84,
+         "match": "给定"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 63,
+         "match": "输入"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 65,
+         "match": "输入"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 70,
+         "match": "输入"
+        },
+        {
+         "file": "lenovo_C4_skill说明.md",
+         "line": 71,
+         "match": "输入"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 122,
+         "match": "输出"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 150,
+         "match": "输出"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 164,
+         "match": "输出"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 178,
+         "match": "输出"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 178,
+         "match": "输出"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 252,
+         "match": "输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 170,
+         "match": "提示"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 106,
+         "match": "跳过"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 106,
+         "match": "跳过"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 143,
+         "match": "跳过"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 146,
+         "match": "跳过"
+        },
+        {
+         "file": "lenovo_C4_AI日志.md",
+         "line": 252,
+         "match": "跳过"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 0.951923076923077,
+   "composite_raw": 0.9711538461538461,
+   "flag_cap": 0.85,
+   "composite": 0.85,
+   "level": "L4",
+   "red_flags": [
+    {
+     "id": "hardcoded_path",
+     "label": "硬编码绝对路径",
+     "severity": "medium",
+     "evidence": [
+      "lenovo_C4_教学说明.md:184 /Users/m",
+      "lenovo_C4_教学说明.md:238 /Users/m"
+     ],
+     "cap": 85
+    }
+   ],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "lenovo_C4_AI日志.md",
+      "line": 75,
+      "match": "被使用"
+     },
+     {
+      "file": "lenovo_C4_AI日志.md",
+      "line": 94,
+      "match": "被使用"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 30,
+    "chars": 6636,
+    "headings": 23,
+    "fences": 6,
+    "list_items": 18,
+    "structure_items": 70,
+    "structure_to_signal_ratio": 2.333,
+    "file": "lenovo_C4_skill说明.md"
+   },
+   "_repo": "415wang417-hao__C4-Skill-Sharing-and-Dissemination"
+  },
+  {
+   "author": "卢怡然",
+   "author_source": "filename+single_author_repo",
+   "n_files": 10,
+   "n_text_files": 5,
+   "completeness": 1.0,
+   "present": [
+    "skill_doc",
+    "executable",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "missing": [],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": true,
+     "file": "卢怡然_C4_skill说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill\\s*说明",
+      "扩展名 .md",
+      "内容信号 4 个"
+     ]
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "challenge-submit-guard\\SKILL.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": true,
+     "file": "卢怡然_C4_demo_01.png",
+     "confidence": "high",
+     "why": [
+      "文件名命中 demo",
+      "扩展名 .png"
+     ]
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": true,
+     "file": "卢怡然_C4_教学说明.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 教学说明",
+      "扩展名 .md",
+      "内容信号 2 个"
+     ]
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": true,
+     "file": "卢怡然_C4_AI日志.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 AI\\s*日志",
+      "扩展名 .md",
+      "内容信号 4 个"
+     ]
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 0.8076923076923078,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 31,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 34,
+         "match": "pip install"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 31,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 71,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 199,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 44,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 81,
+         "match": "C:\\Users\\"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 81,
+         "match": "C:\\Users\\"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 14,
+         "match": "/Users/m"
+        },
+        {
+         "file": "卢怡然_C4_教学说明.md",
+         "line": 142,
+         "match": "C:\\Users\\"
+        },
+        {
+         "file": "卢怡然_C4_教学说明.md",
+         "line": 137,
+         "match": "/Users/x"
+        },
+        {
+         "file": "卢怡然_C4_教学说明.md",
+         "line": 142,
+         "match": "C:\\Users\\"
+        }
+       ],
+       "note": "命中禁止模式"
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 31,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 31,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 71,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 199,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 44,
+         "match": "依赖"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 44,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 80,
+         "match": "Windows"
+        },
+        {
+         "file": "卢怡然_C4_教学说明.md",
+         "line": 140,
+         "match": "Windows"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 14,
+         "match": "```"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 17,
+         "match": "```"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 50,
+         "match": "```"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 54,
+         "match": "```"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 77,
+         "match": "```"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 79,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_challenge-submit-guard.skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "challenge-submit-guard\\SKILL.md",
+         "keys": [
+          "description",
+          "name"
+         ]
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 82,
+         "match": ".skill"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 101,
+         "match": ".skill"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 101,
+         "match": ".skill"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 119,
+         "match": "Usage"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 29,
+         "match": ".skill"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 43,
+         "match": ".skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 127,
+         "match": "1. "
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 130,
+         "match": "2. "
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 134,
+         "match": "3. "
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 29,
+         "match": "1. "
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 30,
+         "match": "2. "
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 31,
+         "match": "3. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 34,
+         "match": "失败"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 58,
+         "match": "失败"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 60,
+         "match": "失败"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 70,
+         "match": "失败"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 72,
+         "match": "失败"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 80,
+         "match": "失败"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 6,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 87,
+         "match": "测试"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 89,
+         "match": "test"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 107,
+         "match": "自检"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 23,
+         "match": "测试"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 203,
+         "match": "测试"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 72,
+         "match": "test"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 49,
+         "match": "实测"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 62,
+         "match": "实测"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 84,
+         "match": "实测"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 84,
+         "match": "实测"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 134,
+         "match": "实测"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 134,
+         "match": "实测"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 45,
+         "match": "判定"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 161,
+         "match": "判定"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 161,
+         "match": "判定"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 188,
+         "match": "判定"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 78,
+         "match": "fail"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 145,
+         "match": "退出码"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_demo_01.png",
+         "real_result_mentioned": true
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 54,
+         "match": "必须"
+        },
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 76,
+         "match": "必须"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 72,
+         "match": "断言"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 30,
+         "match": "必须"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 89,
+         "match": "必须"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 123,
+         "match": "必须"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 10,
+         "match": "**输入**一个挑战交付文件夹路径 + 挑战编号,**输出**一份 7 节体检报告:"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 46,
+         "match": "| **可验证** | ✅ | 输入固定、输出确定;5 个内置断言;对 C1/C2/C3 三个真实交付包有留档输出 |"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 47,
+         "match": "| **IO 明确** | ✅ | 输入=文件夹路径 + 挑战编号;输出=Markdown 报告(或 `--json`) |"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 64,
+         "match": "## 四、输入输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 67,
+         "match": "接受"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 10,
+         "match": "输入"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 46,
+         "match": "输入"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 47,
+         "match": "输入"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 64,
+         "match": "输入"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 66,
+         "match": "输入"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AAR.md",
+         "line": 39,
+         "match": "生成"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 93,
+         "match": "输出"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 155,
+         "match": "输出"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 68,
+         "match": "生成"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 184,
+         "match": "生成"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 10,
+         "match": "输出"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 101,
+         "match": "找不到"
+        },
+        {
+         "file": "卢怡然_C4_AI日志.md",
+         "line": 95,
+         "match": "缺失"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 136,
+         "match": "找不到"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 77,
+         "match": "缺失"
+        },
+        {
+         "file": "卢怡然_C4_skill说明.md",
+         "line": 78,
+         "match": "缺失"
+        },
+        {
+         "file": "卢怡然_C4_教学说明.md",
+         "line": 111,
+         "match": "找不到"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 0.951923076923077,
+   "composite_raw": 0.9711538461538461,
+   "flag_cap": 0.85,
+   "composite": 0.85,
+   "level": "L4",
+   "red_flags": [
+    {
+     "id": "hardcoded_path",
+     "label": "硬编码绝对路径",
+     "severity": "medium",
+     "evidence": [
+      "卢怡然_C4_AI日志.md:81 C:\\Users\\",
+      "卢怡然_C4_AI日志.md:81 C:\\Users\\",
+      "卢怡然_C4_skill说明.md:14 /Users/m",
+      "卢怡然_C4_教学说明.md:142 C:\\Users\\",
+      "卢怡然_C4_教学说明.md:137 /Users/x"
+     ],
+     "cap": 85
+    }
+   ],
+   "propagation": {
+    "status": "evidenced",
+    "evidence": [
+     {
+      "file": "卢怡然_C4_AAR.md",
+      "line": 16,
+      "match": "反馈"
+     },
+     {
+      "file": "卢怡然_C4_AAR.md",
+      "line": 25,
+      "match": "反馈"
+     },
+     {
+      "file": "卢怡然_C4_AAR.md",
+      "line": 149,
+      "match": "反馈"
+     },
+     {
+      "file": "卢怡然_C4_AAR.md",
+      "line": 15,
+      "match": "被使用"
+     }
+    ],
+    "note": "在提交里找到使用/反馈的书面证据"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 33,
+    "chars": 4920,
+    "headings": 16,
+    "fences": 9,
+    "list_items": 9,
+    "structure_items": 50,
+    "structure_to_signal_ratio": 1.515,
+    "file": "challenge-submit-guard\\SKILL.md"
+   },
+   "_repo": "shuibubao-zz__c4-challenge-4cdgor"
+  },
+  {
+   "author": "C4-doc-consistency-auditor",
+   "author_source": "repo_level",
+   "n_files": 1,
+   "n_text_files": 1,
+   "completeness": 0.2,
+   "present": [
+    "executable"
+   ],
+   "missing": [
+    "skill_doc",
+    "demo",
+    "teaching",
+    "ai_log"
+   ],
+   "deliverables": [
+    {
+     "key": "skill_doc",
+     "label": "Skill 说明文档",
+     "required": true,
+     "hit": false,
+     "file": null,
+     "confidence": null,
+     "why": []
+    },
+    {
+     "key": "executable",
+     "label": "可执行内容",
+     "required": true,
+     "hit": true,
+     "file": "doc-consistency-auditor\\SKILL.md",
+     "confidence": "high",
+     "why": [
+      "文件名命中 skill",
+      "扩展名 .md",
+      "内容信号 3 个"
+     ]
+    },
+    {
+     "key": "demo",
+     "label": "Demo（视频/截图）",
+     "required": true,
+     "hit": false,
+     "file": null,
+     "confidence": null,
+     "why": []
+    },
+    {
+     "key": "teaching",
+     "label": "教学说明",
+     "required": true,
+     "hit": false,
+     "file": null,
+     "confidence": null,
+     "why": []
+    },
+    {
+     "key": "ai_log",
+     "label": "AI 日志",
+     "required": true,
+     "hit": false,
+     "file": null,
+     "confidence": null,
+     "why": []
+    }
+   ],
+   "conditions": {
+    "reusable": {
+     "label": "可复用",
+     "weight": 0.25,
+     "score": 0.8846153846153847,
+     "checks": [
+      {
+       "id": "R1",
+       "label": "有安装步骤或环境要求说明",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 37,
+         "match": "前置条件"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 32,
+         "match": "依赖"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R2",
+       "label": "无硬编码的绝对路径",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R3",
+       "label": "无明文密钥/口令",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R4",
+       "label": "列明了依赖或兼容性",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 32,
+         "match": "依赖"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 32,
+         "match": "Python 3"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 39,
+         "match": "Python 3"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 32,
+         "match": "标准库"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "R5",
+       "label": "说明了平台/运行环境",
+       "weight": 0.6,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "R6",
+       "label": "给出了可直接复制的使用示例",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 50,
+         "match": "```"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 56,
+         "match": "```"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 63,
+         "match": "```"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 75,
+         "match": "```"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 92,
+         "match": "```"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 92,
+         "match": "```"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "executable": {
+     "label": "可执行",
+     "weight": 0.25,
+     "score": 0.8076923076923078,
+     "checks": [
+      {
+       "id": "E1",
+       "label": "包含可运行代码或可安装技能包",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "E2",
+       "label": "SKILL 包有合法 frontmatter",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "keys": [
+          "description",
+          "name"
+         ]
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E3",
+       "label": "有明确执行入口",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 22,
+         "match": ".skill"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E4",
+       "label": "有分步骤的工作流",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 44,
+         "match": "### Step"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 47,
+         "match": "### Step"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 61,
+         "match": "### Step"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 77,
+         "match": "### Step"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 82,
+         "match": "### Step"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 18,
+         "match": "1. "
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E5",
+       "label": "语法自检通过（.py 可编译）",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "note": "没有 .py 文件，该项不适用（按通过计）"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "E6",
+       "label": "说明了边界情况的处理",
+       "weight": 0.6,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 85,
+         "match": "边界"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 85,
+         "match": "Edge Case"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 91,
+         "match": "异常"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 5,
+     "total": 6
+    },
+    "verifiable": {
+     "label": "可验证",
+     "weight": 0.25,
+     "score": 0.43181818181818177,
+     "checks": [
+      {
+       "id": "V1",
+       "label": "有测试用例或自检脚本",
+       "weight": 1.0,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 28,
+         "match": "自检"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V2",
+       "label": "给出了预期输出或真实运行结果",
+       "weight": 1.0,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "V3",
+       "label": "有明确的成功/失败判定标准",
+       "weight": 0.9,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 6,
+         "match": "退出码"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 26,
+         "match": "退出码"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 34,
+         "match": "退出码"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 78,
+         "match": "退出码"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 79,
+         "match": "退出码"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 80,
+         "match": "退出码"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "V4",
+       "label": "Demo 展示的是真实结果而非示意图",
+       "weight": 0.8,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      },
+      {
+       "id": "V5",
+       "label": "对关键行为做了断言/校验",
+       "weight": 0.7,
+       "pass": false,
+       "evidence": [],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 2,
+     "total": 5
+    },
+    "clear_io": {
+     "label": "IO 明确",
+     "weight": 0.25,
+     "score": 1.0,
+     "checks": [
+      {
+       "id": "I1",
+       "label": "有「输入 X，输出 Y」式的一句话说明",
+       "weight": 1.2,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 35,
+         "match": "| IO 明确 | 输入路径 → 输出报告,一句话说清 |"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I2",
+       "label": "输入的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 26,
+         "match": "输入"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 35,
+         "match": "输入"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 34,
+         "match": "给定"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I3",
+       "label": "输出的类型/格式写清楚了",
+       "weight": 0.8,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 6,
+         "match": "输出"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 26,
+         "match": "输出"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 35,
+         "match": "输出"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 107,
+         "match": "输出"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 34,
+         "match": "返回"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 89,
+         "match": "返回"
+        }
+       ],
+       "note": ""
+      },
+      {
+       "id": "I4",
+       "label": "说明了输入不满足要求时怎么办",
+       "weight": 0.5,
+       "pass": true,
+       "evidence": [
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 89,
+         "match": "提示"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 45,
+         "match": "跳过"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 64,
+         "match": "跳过"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 90,
+         "match": "跳过"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 92,
+         "match": "跳过"
+        },
+        {
+         "file": "doc-consistency-auditor\\SKILL.md",
+         "line": 93,
+         "match": "跳过"
+        }
+       ],
+       "note": ""
+      }
+     ],
+     "anchor_failed": false,
+     "passed": 4,
+     "total": 4
+    }
+   },
+   "quality": 0.7810314685314685,
+   "composite_raw": 0.5486188811188811,
+   "flag_cap": 0.45,
+   "composite": 0.45,
+   "level": "L1",
+   "red_flags": [
+    {
+     "id": "missing_core",
+     "label": "核心交付物缺失",
+     "severity": "high",
+     "evidence": [
+      "Skill 说明文档",
+      "Demo（视频/截图）",
+      "教学说明",
+      "AI 日志"
+     ],
+     "cap": 45
+    }
+   ],
+   "propagation": {
+    "status": "not_evidenced",
+    "evidence": [],
+    "note": "没有找到任何传播证据（**不等于没传播**）"
+   },
+   "stuffing_detail": {
+    "flagged": false,
+    "reasons": [],
+    "distinct_signals": 20,
+    "chars": 3384,
+    "headings": 21,
+    "fences": 5,
+    "list_items": 22,
+    "structure_items": 69,
+    "structure_to_signal_ratio": 3.45,
+    "file": "doc-consistency-auditor\\SKILL.md"
+   },
+   "_repo": "askjdghfjkghashjkasd__C4-doc-consistency-auditor"
+  }
+ ]
+}

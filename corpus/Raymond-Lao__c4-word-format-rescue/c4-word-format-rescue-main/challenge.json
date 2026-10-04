@@ -1,0 +1,13 @@
+{
+  "challenge_id": "ch-20260717031424-4cdgor",
+  "title": "C4 技能分享与传播",
+  "brief": "🔥 这是整个 Elite20 体系**最关键的挑战**。",
+  "objective": "- --",
+  "deliverables": "*skill说明*,*.skill,*教学说明*,*demo*,*AI日志*",
+  "rubric": "skillQuality 技能质量（25分）：产出技能的定义质量（描述/结构/可执行）\nteachability 可教性（20分）：成果能否教会别人（文档/示例/演示）\nartifactCompleteness 产物完整性（15分）：交付物是否齐全、可运行、可独立使用\naiUsage AI使用质量（20分）：AI 工具使用是否恰当、有效、可追溯\nreflectionQuality 复盘质量（20分）：AAR 反思是否深入、有洞察、有改进方案",
+  "rubric_dimensions": "{\"version\":1,\"challenge_id\":\"C4\",\"totalPoints\":100,\"dimensions\":[{\"id\":\"skillQuality\",\"label\":\"技能质量\",\"description\":\"产出技能的定义质量（描述/结构/可执行）\",\"signals\":[\"描述准确\",\"结构完整\",\"可执行\"],\"negativeSignals\":[\"定义含糊\",\"不可执行\"],\"maxPoints\":25},{\"id\":\"teachability\",\"label\":\"可教性\",\"description\":\"成果能否教会别人（文档/示例/演示）\",\"signals\":[\"有教学文档\",\"有示例\",\"有演示\"],\"negativeSignals\":[\"无说明\",\"别人看不懂\"],\"maxPoints\":20},{\"id\":\"artifactCompleteness\",\"label\":\"产物完整性\",\"description\":\"交付物是否齐全、可运行、可独立使用\",\"signals\":[\"README齐全\",\"可运行\",\"安装/使用说明\"],\"negativeSignals\":[\"文件为空\",\"缺少核心交付物\"],\"maxPoints\":15},{\"id\":\"aiUsage\",\"label\":\"AI使用质量\",\"description\":\"AI 工具使用是否恰当、有效、可追溯\",\"signals\":[\"多轮迭代\",\"prompt优化\",\"工作流设计\",\"AI日志佐证\"],\"negativeSignals\":[\"一句话指令直接提交\",\"没有AI使用记录\"],\"maxPoints\":20},{\"id\":\"reflectionQuality\",\"label\":\"复盘质量\",\"description\":\"AAR 反思是否深入、有洞察、有改进方案\",\"signals\":[\"具体问题分析\",\"有改进方案\",\"记录迭代过程\",\"含失败经验\"],\"negativeSignals\":[\"敷衍了事\",\"没有实际反思\"],\"maxPoints\":20}]}",
+  "red_flags": "{\"flags\":[{\"id\":\"missing_artifacts\",\"description\":\"核心交付物缺失\",\"affectedDimension\":\"artifactCompleteness\",\"maxScore\":5},{\"id\":\"no_ai_log\",\"description\":\"无 AI 使用记录/AAR\",\"affectedDimension\":\"reflectionQuality\",\"maxScore\":5},{\"id\":\"one_shot_ai\",\"description\":\"一句话指令直接提交、无迭代\",\"affectedDimension\":\"aiUsage\",\"maxScore\":5}]}",
+  "required_deliverables": "*skill说明*,*.skill,*教学说明*,*demo*,*AI日志*",
+  "deadline": "2026-12-31T23:59",
+  "status": "published"
+}

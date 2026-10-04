@@ -1,0 +1,2421 @@
+{
+  "C1": {
+    "title": "C1 课程资料获取与翻译",
+    "platform_id": "ch-20260717031336-pxzwy0",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "README.md",
+        "pattern": "README.md",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      },
+      {
+        "label": "拿来说明",
+        "pattern": "*拿来说明*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "contentAccuracy",
+        "label": "内容准确与完整",
+        "max": 25,
+        "signals": [
+          "覆盖度达标",
+          "术语统一",
+          "无硬伤"
+        ],
+        "negative": [
+          "大段漏译",
+          "机器感硬伤",
+          "事实错误"
+        ]
+      },
+      {
+        "id": "pipelineAutomation",
+        "label": "管线自动化",
+        "max": 20,
+        "signals": [
+          "有脚本或清晰步骤",
+          "换源可复用",
+          "质量抽检"
+        ],
+        "negative": [
+          "纯手工一次性",
+          "不可复跑"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C10": {
+    "title": "C10 Build Your Own Agent（构建你的长期智能体 / 第二大脑）",
+    "platform_id": "ch-20260717031601-4cwlrx",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "AGENT.md",
+        "pattern": "AGENT.md",
+        "required": true
+      },
+      {
+        "label": "architecture",
+        "pattern": "*architecture*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "systemArchitecture",
+        "label": "系统架构",
+        "max": 25,
+        "signals": [
+          "分层清晰",
+          "各层可工作",
+          "设计有据"
+        ],
+        "negative": [
+          "架构缺失",
+          "各层脱节"
+        ]
+      },
+      {
+        "id": "memorySystem",
+        "label": "记忆系统",
+        "max": 20,
+        "signals": [
+          "四层结构清晰",
+          "能沉淀",
+          "能检索"
+        ],
+        "negative": [
+          "无记忆设计",
+          "存了找不到"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C10H": {
+    "title": "C10H 安装并驾驭 Hermes Agent",
+    "platform_id": "ch-20260717031609-rnur5a",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "安装记录",
+        "pattern": "*安装记录*",
+        "required": true
+      },
+      {
+        "label": "配置说明",
+        "pattern": "*配置说明*",
+        "required": true
+      },
+      {
+        "label": "demo",
+        "pattern": "*demo*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "mastery",
+        "label": "驾驭程度",
+        "max": 25,
+        "signals": [
+          "熟练使用",
+          "能排错",
+          "能扩展"
+        ],
+        "negative": [
+          "只会照抄教程"
+        ]
+      },
+      {
+        "id": "integration",
+        "label": "集成质量",
+        "max": 20,
+        "signals": [
+          "集成顺畅",
+          "配置清晰",
+          "可复现"
+        ],
+        "negative": [
+          "环境冲突",
+          "不可复现"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C2": {
+    "title": "C2 AI for Math 论文",
+    "platform_id": "ch-20260717031343-8ot0ji",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "paper.tex",
+        "pattern": "paper.tex",
+        "required": true
+      },
+      {
+        "label": "references.bib",
+        "pattern": "references.bib",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "researchRigor",
+        "label": "研究严谨性",
+        "max": 25,
+        "signals": [
+          "文献真实可查",
+          "论证有据",
+          "结论有边界"
+        ],
+        "negative": [
+          "引用造假",
+          "凭空断言"
+        ]
+      },
+      {
+        "id": "technicalExecution",
+        "label": "技术实现",
+        "max": 20,
+        "signals": [
+          "代码规范",
+          "Git提交清晰",
+          "架构设计"
+        ],
+        "negative": [
+          "硬编码",
+          "代码混乱",
+          "无法运行"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C2A": {
+    "title": "C2A / C9：衡量 AGI 的认知能力",
+    "platform_id": "ch-20260717031352-tlg70p",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "proposal",
+        "pattern": "*proposal*",
+        "required": true
+      },
+      {
+        "label": "benchmark",
+        "pattern": "*benchmark*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "benchmarkDesign",
+        "label": "基准设计",
+        "max": 25,
+        "signals": [
+          "指标定义清晰",
+          "基线合理",
+          "可复现"
+        ],
+        "negative": [
+          "指标含糊",
+          "无基线对比"
+        ]
+      },
+      {
+        "id": "researchRigor",
+        "label": "研究严谨性",
+        "max": 20,
+        "signals": [
+          "文献真实可查",
+          "论证有据",
+          "结论有边界"
+        ],
+        "negative": [
+          "引用造假",
+          "凭空断言"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C2G": {
+    "title": "C2G 参数高尔夫 —— 极限约束下的语言模型训练",
+    "platform_id": "ch-20260717031359-b8wyg0",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "方案草案",
+        "pattern": "*方案草案*",
+        "required": true
+      },
+      {
+        "label": "方案设计",
+        "pattern": "*方案设计*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "scoreAchievement",
+        "label": "成绩达成",
+        "max": 25,
+        "signals": [
+          "成绩达到目标线",
+          "有分数记录",
+          "边际提升策略"
+        ],
+        "negative": [
+          "无成绩记录",
+          "无法复现"
+        ]
+      },
+      {
+        "id": "methodology",
+        "label": "方法学",
+        "max": 20,
+        "signals": [
+          "有方法记录",
+          "有对照实验",
+          "策略可解释"
+        ],
+        "negative": [
+          "瞎试无记录",
+          "无法说明为何有效"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C3": {
+    "title": "C3 群内高质量参与",
+    "platform_id": "ch-20260717031407-ez6fae",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      },
+      {
+        "label": "反思",
+        "pattern": "*反思*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "participationQuality",
+        "label": "参与质量",
+        "max": 25,
+        "signals": [
+          "提问有上下文",
+          "回复有证据",
+          "推动讨论"
+        ],
+        "negative": [
+          "灌水",
+          "纯表情",
+          "甩问题无上下文"
+        ]
+      },
+      {
+        "id": "substance",
+        "label": "内容实质",
+        "max": 20,
+        "signals": [
+          "提供新信息",
+          "给出可执行结论",
+          "有深度视角"
+        ],
+        "negative": [
+          "空话套话",
+          "重复他人"
+        ]
+      },
+      {
+        "id": "collaboration",
+        "label": "协作贡献",
+        "max": 15,
+        "signals": [
+          "分工清晰",
+          "互检代码",
+          "联合成果"
+        ],
+        "negative": [
+          "单打独斗",
+          "无协作记录"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 15,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 5,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C3C": {
+    "title": "C3C 双人协作与技能迁移",
+    "platform_id": "ch-20260717031415-0vi5d1",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "协作记录",
+        "pattern": "*协作记录*",
+        "required": true
+      },
+      {
+        "label": "联合成果",
+        "pattern": "*联合成果*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "collaboration",
+        "label": "协作贡献",
+        "max": 25,
+        "signals": [
+          "分工清晰",
+          "互检代码",
+          "联合成果"
+        ],
+        "negative": [
+          "单打独斗",
+          "无协作记录"
+        ]
+      },
+      {
+        "id": "skillTransfer",
+        "label": "技能迁移",
+        "max": 20,
+        "signals": [
+          "复用对方技能",
+          "抽象可复用模块",
+          "迁移有记录"
+        ],
+        "negative": [
+          "各做各的",
+          "无迁移"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 20,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 15,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C4": {
+    "title": "C4 技能分享与传播",
+    "platform_id": "ch-20260717031424-4cdgor",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "skill说明",
+        "pattern": "*skill说明*",
+        "required": true
+      },
+      {
+        "label": ".skill",
+        "pattern": "*.skill",
+        "required": true
+      },
+      {
+        "label": "教学说明",
+        "pattern": "*教学说明*",
+        "required": true
+      },
+      {
+        "label": "demo",
+        "pattern": "*demo*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "skillQuality",
+        "label": "技能质量",
+        "max": 25,
+        "signals": [
+          "描述准确",
+          "结构完整",
+          "可执行"
+        ],
+        "negative": [
+          "定义含糊",
+          "不可执行"
+        ]
+      },
+      {
+        "id": "teachability",
+        "label": "可教性",
+        "max": 20,
+        "signals": [
+          "有教学文档",
+          "有示例",
+          "有演示"
+        ],
+        "negative": [
+          "无说明",
+          "别人看不懂"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C4A": {
+    "title": "C4A 技能提交自动评审",
+    "platform_id": "ch-20260717031432-5jvqje",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "方案设计",
+        "pattern": "*方案设计*",
+        "required": true
+      },
+      {
+        "label": "skill-evaluator",
+        "pattern": "*skill-evaluator*",
+        "required": true
+      },
+      {
+        "label": "评审报告",
+        "pattern": "*评审报告*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "evaluatorQuality",
+        "label": "评审器质量",
+        "max": 25,
+        "signals": [
+          "评分标准清晰",
+          "有测试用例",
+          "误判率低"
+        ],
+        "negative": [
+          "评分随意",
+          "无标准"
+        ]
+      },
+      {
+        "id": "technicalExecution",
+        "label": "技术实现",
+        "max": 20,
+        "signals": [
+          "代码规范",
+          "Git提交清晰",
+          "架构设计"
+        ],
+        "negative": [
+          "硬编码",
+          "代码混乱",
+          "无法运行"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C4B": {
+    "title": "C4B 公众号文章生成技能",
+    "platform_id": "ch-20260717031440-bp05rs",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "wechat-publisher",
+        "pattern": "*wechat-publisher*",
+        "required": true
+      },
+      {
+        "label": "文章链接",
+        "pattern": "*文章链接*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "contentQuality",
+        "label": "内容质量",
+        "max": 25,
+        "signals": [
+          "结构清晰",
+          "有深度",
+          "排版精良"
+        ],
+        "negative": [
+          "流水账",
+          "无观点"
+        ]
+      },
+      {
+        "id": "distribution",
+        "label": "传播设计",
+        "max": 20,
+        "signals": [
+          "渠道合理",
+          "有数据追踪",
+          "有互动"
+        ],
+        "negative": [
+          "发布即弃",
+          "无反馈收集"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C4C": {
+    "title": "C4C 作业自动求解与排版",
+    "platform_id": "ch-20260717031447-k82c4m",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "方案设计",
+        "pattern": "*方案设计*",
+        "required": true
+      },
+      {
+        "label": "homework-solver",
+        "pattern": "*homework-solver*",
+        "required": true
+      },
+      {
+        "label": "output",
+        "pattern": "*output*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "solverQuality",
+        "label": "求解质量",
+        "max": 25,
+        "signals": [
+          "正确率高",
+          "能处理边界",
+          "输出可核验"
+        ],
+        "negative": [
+          "只对样例",
+          "无法核验"
+        ]
+      },
+      {
+        "id": "typesetting",
+        "label": "排版质量",
+        "max": 20,
+        "signals": [
+          "格式规范",
+          "美观",
+          "可导出"
+        ],
+        "negative": [
+          "格式混乱",
+          "不可用"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C4D": {
+    "title": "C4D 本地大模型 Agent 技能",
+    "platform_id": "ch-20260717031455-uzqs9k",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "Agent技能",
+        "pattern": "*Agent技能*",
+        "required": true
+      },
+      {
+        "label": "demo",
+        "pattern": "*demo*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "AAR",
+        "pattern": "*AAR*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "agentCapability",
+        "label": "Agent能力",
+        "max": 25,
+        "signals": [
+          "功能可用",
+          "有记忆",
+          "有技能"
+        ],
+        "negative": [
+          "空壳",
+          "跑不通"
+        ]
+      },
+      {
+        "id": "technicalExecution",
+        "label": "技术实现",
+        "max": 20,
+        "signals": [
+          "代码规范",
+          "Git提交清晰",
+          "架构设计"
+        ],
+        "negative": [
+          "硬编码",
+          "代码混乱",
+          "无法运行"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C5": {
+    "title": "C5 GitHub Repository",
+    "platform_id": "ch-20260717031503-ihozqu",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "README.md",
+        "pattern": "README.md",
+        "required": true
+      },
+      {
+        "label": "repo链接",
+        "pattern": "*repo链接*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "拿来说明",
+        "pattern": "*拿来说明*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "repoQuality",
+        "label": "仓库质量",
+        "max": 25,
+        "signals": [
+          "README专业",
+          "结构清晰",
+          "有License"
+        ],
+        "negative": [
+          "无文档",
+          "结构混乱"
+        ]
+      },
+      {
+        "id": "community",
+        "label": "社区要素",
+        "max": 20,
+        "signals": [
+          "贡献指南",
+          "issue模板",
+          "版本管理"
+        ],
+        "negative": [
+          "无任何社区要素"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C5A": {
+    "title": "C5A GitHub 入门与仓库理解",
+    "platform_id": "ch-20260717031511-x5c6t1",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "仓库分析",
+        "pattern": "*仓库分析*",
+        "required": true
+      },
+      {
+        "label": "README.md",
+        "pattern": "README.md",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "fundamentals",
+        "label": "基础掌握",
+        "max": 25,
+        "signals": [
+          "操作规范",
+          "理解原理",
+          "能排错"
+        ],
+        "negative": [
+          "只会点按钮",
+          "原理不懂"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 20,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "technicalExecution",
+        "label": "技术实现",
+        "max": 15,
+        "signals": [
+          "代码规范",
+          "Git提交清晰",
+          "架构设计"
+        ],
+        "negative": [
+          "硬编码",
+          "代码混乱",
+          "无法运行"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C6": {
+    "title": "C6 Web Application",
+    "platform_id": "ch-20260717031519-qqqx60",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "app链接",
+        "pattern": "*app链接*",
+        "required": true
+      },
+      {
+        "label": "demo",
+        "pattern": "*demo*",
+        "required": true
+      },
+      {
+        "label": "repo链接",
+        "pattern": "*repo链接*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "productQuality",
+        "label": "产品完成度",
+        "max": 25,
+        "signals": [
+          "功能完整",
+          "可用性高",
+          "有亮点"
+        ],
+        "negative": [
+          "半成品",
+          "不可用"
+        ]
+      },
+      {
+        "id": "technicalExecution",
+        "label": "技术实现",
+        "max": 20,
+        "signals": [
+          "代码规范",
+          "Git提交清晰",
+          "架构设计"
+        ],
+        "negative": [
+          "硬编码",
+          "代码混乱",
+          "无法运行"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C6A": {
+    "title": "C6A 提交数据仪表盘",
+    "platform_id": "ch-20260717031528-w43gy7",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "仪表盘",
+        "pattern": "*仪表盘*",
+        "required": true
+      },
+      {
+        "label": "demo",
+        "pattern": "*demo*",
+        "required": true
+      },
+      {
+        "label": "数据",
+        "pattern": "*数据*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "dataInsight",
+        "label": "数据洞察",
+        "max": 25,
+        "signals": [
+          "洞察有据",
+          "口径清晰",
+          "有结论"
+        ],
+        "negative": [
+          "堆砌图表",
+          "无结论"
+        ]
+      },
+      {
+        "id": "visualization",
+        "label": "可视化",
+        "max": 20,
+        "signals": [
+          "图表恰当",
+          "可读性强",
+          "交互可用"
+        ],
+        "negative": [
+          "图表误导",
+          "杂乱"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C7": {
+    "title": "C7 内容传播",
+    "platform_id": "ch-20260717031536-sfz852",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "文章标题",
+        "pattern": "*文章标题*",
+        "required": true
+      },
+      {
+        "label": "数据截图",
+        "pattern": "*数据截图*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "contentQuality",
+        "label": "内容质量",
+        "max": 25,
+        "signals": [
+          "结构清晰",
+          "有深度",
+          "排版精良"
+        ],
+        "negative": [
+          "流水账",
+          "无观点"
+        ]
+      },
+      {
+        "id": "distribution",
+        "label": "传播设计",
+        "max": 20,
+        "signals": [
+          "渠道合理",
+          "有数据追踪",
+          "有互动"
+        ],
+        "negative": [
+          "发布即弃",
+          "无反馈收集"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C8": {
+    "title": "C8 Real-World Project Execution（真实项目落地）",
+    "platform_id": "ch-20260717031544-7vw0rn",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "proposal",
+        "pattern": "*proposal*",
+        "required": true
+      },
+      {
+        "label": "AAR_W",
+        "pattern": "*AAR_W*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      },
+      {
+        "label": "拿来说明",
+        "pattern": "*拿来说明*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "delivery",
+        "label": "交付质量",
+        "max": 25,
+        "signals": [
+          "满足需求",
+          "按时交付",
+          "有验收记录"
+        ],
+        "negative": [
+          "偏离需求",
+          "延期无说明"
+        ]
+      },
+      {
+        "id": "problemSolving",
+        "label": "问题解决",
+        "max": 20,
+        "signals": [
+          "定位准确",
+          "方案有效",
+          "有验证"
+        ],
+        "negative": [
+          "治标不治本",
+          "无验证"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  },
+  "C9": {
+    "title": "C9 Self-Initiated Project（自驱项目）",
+    "platform_id": "ch-20260717031553-t2892g",
+    "deadline": "2026-12-31T23:59",
+    "deliverables": [
+      {
+        "label": "proposal",
+        "pattern": "*proposal*",
+        "required": true
+      },
+      {
+        "label": "AAR_W",
+        "pattern": "*AAR_W*",
+        "required": true
+      },
+      {
+        "label": "AI日志",
+        "pattern": "*AI日志*",
+        "required": true
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "initiative",
+        "label": "自驱力",
+        "max": 25,
+        "signals": [
+          "选题有价值",
+          "持续推进",
+          "有里程碑"
+        ],
+        "negative": [
+          "三分钟热度",
+          "选题随意"
+        ]
+      },
+      {
+        "id": "delivery",
+        "label": "交付质量",
+        "max": 20,
+        "signals": [
+          "满足需求",
+          "按时交付",
+          "有验收记录"
+        ],
+        "negative": [
+          "偏离需求",
+          "延期无说明"
+        ]
+      },
+      {
+        "id": "artifactCompleteness",
+        "label": "产物完整性",
+        "max": 15,
+        "signals": [
+          "README齐全",
+          "可运行",
+          "安装/使用说明"
+        ],
+        "negative": [
+          "文件为空",
+          "缺少核心交付物"
+        ]
+      },
+      {
+        "id": "aiUsage",
+        "label": "AI使用质量",
+        "max": 20,
+        "signals": [
+          "多轮迭代",
+          "prompt优化",
+          "工作流设计",
+          "AI日志佐证"
+        ],
+        "negative": [
+          "一句话指令直接提交",
+          "没有AI使用记录"
+        ]
+      },
+      {
+        "id": "reflectionQuality",
+        "label": "复盘质量",
+        "max": 20,
+        "signals": [
+          "具体问题分析",
+          "有改进方案",
+          "记录迭代过程",
+          "含失败经验"
+        ],
+        "negative": [
+          "敷衍了事",
+          "没有实际反思"
+        ]
+      }
+    ],
+    "red_flags": [
+      {
+        "id": "missing_artifacts",
+        "desc": "核心交付物缺失",
+        "affects": "artifactCompleteness",
+        "cap": 5
+      },
+      {
+        "id": "no_ai_log",
+        "desc": "无 AI 使用记录/AAR",
+        "affects": "reflectionQuality",
+        "cap": 5
+      },
+      {
+        "id": "one_shot_ai",
+        "desc": "一句话指令直接提交、无迭代",
+        "affects": "aiUsage",
+        "cap": 5
+      }
+    ]
+  }
+}

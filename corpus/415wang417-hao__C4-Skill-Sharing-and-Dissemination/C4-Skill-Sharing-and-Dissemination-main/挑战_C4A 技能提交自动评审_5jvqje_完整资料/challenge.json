@@ -1,0 +1,13 @@
+{
+  "challenge_id": "ch-20260717031432-5jvqje",
+  "title": "C4A 技能提交自动评审",
+  "brief": "🔥 C4 的进阶挑战——不是**做**一个技能，而是**评审**所有人的技能。",
+  "objective": "- --",
+  "deliverables": "*方案设计*,*skill-evaluator*,*评审报告*,*AI日志*",
+  "rubric": "evaluatorQuality 评审器质量（25分）：自动评审器/评测器的质量与可靠性\ntechnicalExecution 技术实现（20分）：技术方案合理性与工程质量\nartifactCompleteness 产物完整性（15分）：交付物是否齐全、可运行、可独立使用\naiUsage AI使用质量（20分）：AI 工具使用是否恰当、有效、可追溯\nreflectionQuality 复盘质量（20分）：AAR 反思是否深入、有洞察、有改进方案",
+  "rubric_dimensions": "{\"version\":1,\"challenge_id\":\"C4A\",\"totalPoints\":100,\"dimensions\":[{\"id\":\"evaluatorQuality\",\"label\":\"评审器质量\",\"description\":\"自动评审器/评测器的质量与可靠性\",\"signals\":[\"评分标准清晰\",\"有测试用例\",\"误判率低\"],\"negativeSignals\":[\"评分随意\",\"无标准\"],\"maxPoints\":25},{\"id\":\"technicalExecution\",\"label\":\"技术实现\",\"description\":\"技术方案合理性与工程质量\",\"signals\":[\"代码规范\",\"Git提交清晰\",\"架构设计\"],\"negativeSignals\":[\"硬编码\",\"代码混乱\",\"无法运行\"],\"maxPoints\":20},{\"id\":\"artifactCompleteness\",\"label\":\"产物完整性\",\"description\":\"交付物是否齐全、可运行、可独立使用\",\"signals\":[\"README齐全\",\"可运行\",\"安装/使用说明\"],\"negativeSignals\":[\"文件为空\",\"缺少核心交付物\"],\"maxPoints\":15},{\"id\":\"aiUsage\",\"label\":\"AI使用质量\",\"description\":\"AI 工具使用是否恰当、有效、可追溯\",\"signals\":[\"多轮迭代\",\"prompt优化\",\"工作流设计\",\"AI日志佐证\"],\"negativeSignals\":[\"一句话指令直接提交\",\"没有AI使用记录\"],\"maxPoints\":20},{\"id\":\"reflectionQuality\",\"label\":\"复盘质量\",\"description\":\"AAR 反思是否深入、有洞察、有改进方案\",\"signals\":[\"具体问题分析\",\"有改进方案\",\"记录迭代过程\",\"含失败经验\"],\"negativeSignals\":[\"敷衍了事\",\"没有实际反思\"],\"maxPoints\":20}]}",
+  "red_flags": "{\"flags\":[{\"id\":\"missing_artifacts\",\"description\":\"核心交付物缺失\",\"affectedDimension\":\"artifactCompleteness\",\"maxScore\":5},{\"id\":\"no_ai_log\",\"description\":\"无 AI 使用记录/AAR\",\"affectedDimension\":\"reflectionQuality\",\"maxScore\":5},{\"id\":\"one_shot_ai\",\"description\":\"一句话指令直接提交、无迭代\",\"affectedDimension\":\"aiUsage\",\"maxScore\":5}]}",
+  "required_deliverables": "*方案设计*,*skill-evaluator*,*评审报告*,*AI日志*",
+  "deadline": "2026-12-31T23:59",
+  "status": "published"
+}

@@ -1,0 +1,27 @@
+# 临时与缓存
+.tmp_test/
+.tmp_skill/
+.tmp_skill_out/
+__pycache__/
+*.pyc
+*.xdv
+*.aux
+*.out
+
+# 评审输出是**要提交的**（报告里引用它），所以不忽略 reports/
+# 但逐份报告的中间产物较多，按需保留
+reports/per_submission/
+
+# 修复过程中用过的临时脚本（已完成使命）
+_fixquotes.py
+_unfixquotes.py
+_repair.py
+_repair2.py
+_repair3.py
+_repair4.py
+_patch_matching.py
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

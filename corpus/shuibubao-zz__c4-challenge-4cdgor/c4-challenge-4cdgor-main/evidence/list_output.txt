@@ -1,0 +1,26 @@
+challenge-submit-guard 已注册 20 个挑战：
+
+| 编号 | 标题 | 必交交付物 |
+|---|---|---|
+| C1 | C1 课程资料获取与翻译 | README.md、AI日志、AAR、拿来说明 |
+| C10 | C10 Build Your Own Agent（构建你的长期智能体 / 第二大脑） | AGENT.md、architecture、AAR、AI日志 |
+| C10H | C10H 安装并驾驭 Hermes Agent | 安装记录、配置说明、demo、AI日志 |
+| C2 | C2 AI for Math 论文 | paper.tex、references.bib、AI日志、AAR |
+| C2A | C2A / C9：衡量 AGI 的认知能力 | proposal、benchmark、AI日志、AAR |
+| C2G | C2G 参数高尔夫 —— 极限约束下的语言模型训练 | 方案草案、方案设计、AI日志、AAR |
+| C3 | C3 群内高质量参与 | AI日志、AAR、反思 |
+| C3C | C3C 双人协作与技能迁移 | 协作记录、联合成果、AI日志、AAR |
+| C4 | C4 技能分享与传播 | skill说明、.skill、教学说明、demo、AI日志 |
+| C4A | C4A 技能提交自动评审 | 方案设计、skill-evaluator、评审报告、AI日志 |
+| C4B | C4B 公众号文章生成技能 | wechat-publisher、文章链接、AI日志 |
+| C4C | C4C 作业自动求解与排版 | 方案设计、homework-solver、output、AI日志 |
+| C4D | C4D 本地大模型 Agent 技能 | Agent技能、demo、AI日志、AAR |
+| C5 | C5 GitHub Repository | README.md、repo链接、AI日志、拿来说明 |
+| C5A | C5A GitHub 入门与仓库理解 | 仓库分析、README.md、AI日志 |
+| C6 | C6 Web Application | app链接、demo、repo链接、AI日志 |
+| C6A | C6A 提交数据仪表盘 | 仪表盘、demo、数据、AI日志 |
+| C7 | C7 内容传播 | 文章标题、数据截图、AI日志 |
+| C8 | C8 Real-World Project Execution（真实项目落地） | proposal、AAR_W、AI日志、拿来说明 |
+| C9 | C9 Self-Initiated Project（自驱项目） | proposal、AAR_W、AI日志 |
+
+用法：python challenge_submit_guard.py <文件夹> -c <编号>

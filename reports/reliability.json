@@ -1,0 +1,411 @@
+{
+ "n_cases": 20,
+ "band_hit": 18,
+ "band_total": 18,
+ "level_hit": 17,
+ "level_total": 17,
+ "author_hit": 1,
+ "author_total": 1,
+ "exit_hit": 1,
+ "exit_total": 1,
+ "flag_precision": 1.0,
+ "flag_recall": 1.0,
+ "flag_f1": 1.0,
+ "flag_tp": 11,
+ "flag_fp": 0,
+ "flag_fn": 0,
+ "naive_band_hit": 16,
+ "mine_band_hit": 18,
+ "deterministic": true,
+ "robust_to_rename": true,
+ "assertions_ok": 87,
+ "assertions_fail": 0,
+ "failures": [],
+ "rows": [
+  {
+   "id": "gold01_perfect",
+   "composite": 0.9711538461538461,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.951923076923077,
+   "expect_min": 0.85,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold02_missing_demo",
+   "composite": 0.75,
+   "level": "L3",
+   "completeness": 0.8,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.8111888111888113,
+   "expect_min": 0.6,
+   "expect_max": 0.8
+  },
+  {
+   "id": "gold03_missing_ailog",
+   "composite": 0.7019055944055945,
+   "level": "L3",
+   "completeness": 0.8,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.636509324009324,
+   "expect_min": 0.55,
+   "expect_max": 0.8
+  },
+  {
+   "id": "gold04_only_doc",
+   "composite": 0.29381118881118884,
+   "level": "L1",
+   "completeness": 0.2,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.3563519813519814,
+   "expect_min": 0.1,
+   "expect_max": 0.45
+  },
+  {
+   "id": "gold05_empty_deliverables",
+   "composite": 0.16653846153846158,
+   "level": "L1",
+   "completeness": 0.2,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.14423076923076927,
+   "expect_min": 0.0,
+   "expect_max": 0.45
+  },
+  {
+   "id": "gold06_keyword_stuffing",
+   "composite": 0.6,
+   "level": "L2",
+   "completeness": 1.0,
+   "flags": [
+    "keyword_stuffing"
+   ],
+   "quality": 0.8397435897435898,
+   "expect_min": 0.0,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold07_hardcoded_path",
+   "composite": 0.85,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [
+    "hardcoded_path"
+   ],
+   "quality": 0.7631118881118881,
+   "expect_min": 0.6,
+   "expect_max": 0.85
+  },
+  {
+   "id": "gold08_secret_leak",
+   "composite": 0.5,
+   "level": "L2",
+   "completeness": 1.0,
+   "flags": [
+    "secret_leak"
+   ],
+   "quality": 0.7631118881118881,
+   "expect_min": 0.0,
+   "expect_max": 0.5
+  },
+  {
+   "id": "gold09_no_io",
+   "composite": 0.7958041958041958,
+   "level": "L3",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.6596736596736597,
+   "expect_min": 0.4,
+   "expect_max": 0.85
+  },
+  {
+   "id": "gold10_negation_trap",
+   "composite": 0.42573426573426576,
+   "level": "L1",
+   "completeness": 0.4,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.44289044289044294,
+   "expect_min": null,
+   "expect_max": 0.6
+  },
+  {
+   "id": "gold11_multi_version",
+   "composite": 0.8867132867132868,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.8111888111888113,
+   "expect_min": 0.75,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold12_gbk",
+   "composite": 0.8867132867132868,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.8111888111888113,
+   "expect_min": 0.85,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold13_nonstandard_names",
+   "composite": 0.8867132867132868,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.8111888111888113,
+   "expect_min": 0.8,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold14_binary_only",
+   "composite": 0.16653846153846158,
+   "level": "L1",
+   "completeness": 0.2,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.14423076923076927,
+   "expect_min": 0.0,
+   "expect_max": 0.45
+  },
+  {
+   "id": "gold15_syntax_error",
+   "composite": 0.85,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [
+    "syntax_error"
+   ],
+   "quality": 0.7631118881118881,
+   "expect_min": 0.5,
+   "expect_max": 0.88
+  },
+  {
+   "id": "gold16_skill_package",
+   "composite": 0.9097902097902099,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.8496503496503497,
+   "expect_min": 0.8,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold18_no_demo_but_rich",
+   "composite": 0.75,
+   "level": "L3",
+   "completeness": 0.8,
+   "flags": [
+    "missing_core"
+   ],
+   "quality": 0.8496503496503497,
+   "expect_min": 0.6,
+   "expect_max": 0.88
+  },
+  {
+   "id": "gold19_machine_prefix",
+   "composite": 0.8867132867132868,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.8111888111888113,
+   "expect_min": 0.85,
+   "expect_max": 1.0
+  },
+  {
+   "id": "gold20_placeholder_ok",
+   "composite": 0.8867132867132868,
+   "level": "L4",
+   "completeness": 1.0,
+   "flags": [],
+   "quality": 0.8111888111888113,
+   "expect_min": 0.85,
+   "expect_max": 1.0
+  }
+ ],
+ "naive_rows": [
+  {
+   "id": "gold01_perfect",
+   "composite": 0.9,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.85,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold02_missing_demo",
+   "composite": 0.77,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.6,
+   "expect_max": 0.8,
+   "completeness": 0.8
+  },
+  {
+   "id": "gold03_missing_ailog",
+   "composite": 0.5700000000000001,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.55,
+   "expect_max": 0.8,
+   "completeness": 0.8
+  },
+  {
+   "id": "gold04_only_doc",
+   "composite": 0.18,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.1,
+   "expect_max": 0.45,
+   "completeness": 0.2
+  },
+  {
+   "id": "gold05_empty_deliverables",
+   "composite": 0.4,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.0,
+   "expect_max": 0.45,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold06_keyword_stuffing",
+   "composite": 1.0,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.0,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold07_hardcoded_path",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.6,
+   "expect_max": 0.85,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold08_secret_leak",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.0,
+   "expect_max": 0.5,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold09_no_io",
+   "composite": 0.75,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.4,
+   "expect_max": 0.85,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold10_negation_trap",
+   "composite": 0.41000000000000003,
+   "level": null,
+   "flags": [],
+   "expect_min": null,
+   "expect_max": 0.6,
+   "completeness": 0.4
+  },
+  {
+   "id": "gold11_multi_version",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.75,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold12_gbk",
+   "composite": 0.45,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.85,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold13_nonstandard_names",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.8,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold14_binary_only",
+   "composite": 0.08000000000000002,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.0,
+   "expect_max": 0.45,
+   "completeness": 0.2
+  },
+  {
+   "id": "gold15_syntax_error",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.5,
+   "expect_max": 0.88,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold16_skill_package",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.8,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold18_no_demo_but_rich",
+   "composite": 0.77,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.6,
+   "expect_max": 0.88,
+   "completeness": 0.8
+  },
+  {
+   "id": "gold19_machine_prefix",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.85,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  },
+  {
+   "id": "gold20_placeholder_ok",
+   "composite": 0.85,
+   "level": null,
+   "flags": [],
+   "expect_min": 0.85,
+   "expect_max": 1.0,
+   "completeness": 1.0
+  }
+ ]
+}

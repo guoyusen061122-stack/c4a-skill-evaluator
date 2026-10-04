@@ -1,0 +1,14 @@
+# C4A 结构化课程定义（由 freeze-course-content.mjs 生成，v1.0 冻结）
+id: C4A
+title: "技能提交自动评审（Automated Skill Submission Evaluator）"
+difficulty: 
+brief: "构建一个技能提交自动评审器，用明确的评分标准与测试用例保证评审质量。"
+objective:
+  - "设计四维评审标准（描述/结构/命名/可教性）"
+  - "实现可运行的自动评审器"
+  - "用测试用例验证评审可靠性"
+  - "沉淀评审器为可复用技能"
+deliverables_pattern: "*方案设计*,*skill-evaluator*,*评审报告*,*AI日志*"
+deadline: 2026-12-31T23:59
+platform_challenge_id: ch-20260717031432-5jvqje
+source_md: CHALLENGE.md

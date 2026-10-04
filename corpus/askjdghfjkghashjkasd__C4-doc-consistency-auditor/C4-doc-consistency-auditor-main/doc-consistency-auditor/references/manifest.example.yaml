@@ -1,0 +1,7 @@
+# 交付物清单（glob，相对被审计目录；未命中任何文件即报 R5 缺失）
+deliverables:
+  - "README.md"
+  - "*.skill"
+  - "AI日志*.md"
+  - "AAR*.md"
+  - "skill说明*.md"

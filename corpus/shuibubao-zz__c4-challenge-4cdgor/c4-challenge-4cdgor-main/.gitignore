@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 系统
+.DS_Store
+desktop.ini
+Thumbs.db
+~$*
+
+# 临时产物（正式报告在 evidence/ 留档）
+*.log
+audit.json
+体检报告.md

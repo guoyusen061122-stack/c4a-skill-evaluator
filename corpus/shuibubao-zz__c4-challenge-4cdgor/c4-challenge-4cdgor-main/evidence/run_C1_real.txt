@@ -1,0 +1,23 @@
+# 提交前体检报告：C1 课程资料获取与翻译
+
+- **挑战**：`C1`（平台 ID `ch-20260717031336-pxzwy0`，截止 2026-12-31T23:59）
+- **路径**：`C:\Users\卢怡然\Desktop\c1`
+- **扫描**：104 个文件，共 21.7 MB
+- **交付物完整度**：4 / 4（100%）
+
+## 1. 交付物核对
+
+| 必交物 | 匹配模式 | 状态 | 命中文件 |
+|---|---|---|---|
+| README.md | `README.md` | ✅ 已交 | `README.md` |
+| AI日志 | `*AI日志*` | ✅ 已交 | `AI日志.md` |
+| AAR | `*AAR*` | ✅ 已交 | `AAR.md` |
+| 拿来说明 | `*拿来说明*` | ✅ 已交 | `拿来说明.md` |
+
+## 2. 命名规范（`姓名_挑战号_部件.扩展名`）
+
+- 符合规范：**0** 个
+- 不符合规范：**104** 个
+- 示例（最多列 8 个）：`AAR.md`、`AI日志.md`、`README.md`、`corpus/en/agentic-ai-threats.md`、`corpus/en/ai-code-review-best-practices.md`、`corpus/en/benefits-agentic-ai-oncall.md`、`corpus/en/claude-code-best-practices.md`、`corpus/en/code-review-essentials.md`
+
+#

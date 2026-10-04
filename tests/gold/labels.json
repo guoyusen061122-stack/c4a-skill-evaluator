@@ -1,0 +1,236 @@
+{
+ "gold01_perfect": {
+  "completeness": 1.0,
+  "composite_min": 0.85,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "author": "SunYi",
+  "rationale": "五个交付物齐全，内容真实完整，无红旗 → 应落在 L4 上限区间。"
+ },
+ "gold02_missing_demo": {
+  "completeness": 0.8,
+  "composite_min": 0.6,
+  "composite_max": 0.8,
+  "flags": [
+   "missing_core"
+  ],
+  "level": "L3",
+  "author": "LiEr",
+  "rationale": "缺 1 个必交交付物 → 完整性 0.8；按 missing_core 的 cap_table，缺 1 个上限 75。"
+ },
+ "gold03_missing_ailog": {
+  "completeness": 0.8,
+  "composite_min": 0.55,
+  "composite_max": 0.8,
+  "flags": [
+   "missing_core"
+  ],
+  "allow_levels": [
+   "L2",
+   "L3"
+  ],
+  "author": "WangSan",
+  "rationale": "缺 AI 日志 → missing_core(cap75) 与 no_ai_log(cap80) 同时命中，取更严的。"
+ },
+ "gold04_only_doc": {
+  "completeness": 0.2,
+  "composite_min": 0.1,
+  "composite_max": 0.45,
+  "flags": [
+   "missing_core"
+  ],
+  "level": "L1",
+  "author": "ZhaoSi",
+  "rationale": "只交 1/5 → 缺 4 个，cap_table 命中 [3,45]，上限 45。"
+ },
+ "gold05_empty_deliverables": {
+  "completeness": 0.2,
+  "composite_min": 0.0,
+  "composite_max": 0.45,
+  "flags": [
+   "missing_core"
+  ],
+  "level": "L1",
+  "author": "QianWu",
+  "rationale": "五个文件名全对但都是空文件。近空文件不参与槽位匹配 → 完整性应为 0（不是 1.0）。这是评价一个评审器最关键的样本：数文件名就能骗过的话，评审器没有价值。"
+ },
+ "gold06_keyword_stuffing": {
+  "completeness": 1.0,
+  "composite_min": 0.0,
+  "composite_max": 1.0,
+  "flags": [
+   "keyword_stuffing"
+  ],
+  "level": null,
+  "allow_levels": [
+   "L1",
+   "L2",
+   "L3"
+  ],
+  "author": "ZhouLiu",
+  "rationale": "文件名齐全、正文里堆满规则词，但没有任何真实内容与结构 → 应被 keyword_stuffing 抓住并压到 60 分以下。",
+  "known_miss": "堆砌文档里塞了 4 个关键词标题与代码块，结构项/信号比值 0.45 > 0.35，纯结构判据抓不到。已如实记为漏判，不放宽阈值去迁就。"
+ },
+ "gold07_hardcoded_path": {
+  "completeness": 1.0,
+  "composite_min": 0.6,
+  "composite_max": 0.85,
+  "flags": [
+   "hardcoded_path"
+  ],
+  "level": null,
+  "allow_levels": [
+   "L3",
+   "L4"
+  ],
+  "author": "SunQi",
+  "rationale": "出现 `C:\\Users\\...` → hardcoded_path(cap85)。这是「可复用」最常见的破坏方式。"
+ },
+ "gold08_secret_leak": {
+  "completeness": 1.0,
+  "composite_min": 0.0,
+  "composite_max": 0.5,
+  "flags": [
+   "secret_leak"
+  ],
+  "level": null,
+  "allow_levels": [
+   "L1",
+   "L2"
+  ],
+  "author": "ZhouBa",
+  "rationale": "明文 `sk-` 密钥 → secret_leak(cap50)；应显著压分。"
+ },
+ "gold09_no_io": {
+  "completeness": 1.0,
+  "composite_min": 0.4,
+  "composite_max": 0.85,
+  "flags": [],
+  "level": null,
+  "io_score_max": 0.6,
+  "author": "WuJiu",
+  "rationale": "说明文档里**没有**「输入X，输出Y」式的一句话 → clear_io 不应满分。这是区分「有文档」和「文档讲清楚了 IO」的关键样本。"
+ },
+ "gold10_negation_trap": {
+  "completeness": 0.4,
+  "composite_max": 0.6,
+  "flags": [
+   "missing_core"
+  ],
+  "level": null,
+  "condition_max": {
+   "verifiable": 0.75
+  },
+  "must_not_find": [
+   "verifiable.V1",
+   "verifiable.V5",
+   "executable.E6"
+  ],
+  "author": "ZhengShi",
+  "rationale": "正文写的是「**没有**测试」「**无**教学说明」「**尚未**加入断言」—— 朴素关键词计数器会把 V1/V5/E6 判为通过。否定闸门必须让它们不通过。**没有这个问题的话，一个什么都没做的提交反而能靠「声明自己没做」得分。**"
+ },
+ "gold11_multi_version": {
+  "completeness": 1.0,
+  "composite_min": 0.75,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "author": "FengShiyi",
+  "rationale": "v1/v2 两个版本都在。槽位匹配只能给 skill_doc 一个文件 → 另一个版本**不应**被算成别的交付物（否则完整性虚高）。"
+ },
+ "gold12_gbk": {
+  "completeness": 1.0,
+  "composite_min": 0.85,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "author": "ChenShier",
+  "rationale": "文件用 **GBK** 编码（Windows 记事本默认保存格式）。UTF-8-only 的读取器会拿到乱码，把所有信号判为缺失；GBK 回退必须让它与 UTF-8 版得到同样的分。"
+ },
+ "gold13_nonstandard_names": {
+  "completeness": 1.0,
+  "composite_min": 0.8,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "author_source": "repo_level",
+  "author": "repo_only",
+  "rationale": "文件名不带 `姓名_C4_` 前缀，全在仓库根目录下的一个子目录里。单候选 → 按仓库名归一位作者（repo_level），分数不应因此变差。"
+ },
+ "gold14_binary_only": {
+  "completeness": 0.2,
+  "composite_min": 0.0,
+  "composite_max": 0.45,
+  "flags": [
+   "missing_core"
+  ],
+  "level": "L1",
+  "author": "GuSanshi",
+  "rationale": "只交了演示文件 → 完整性 0.2，缺 4 个。"
+ },
+ "gold15_syntax_error": {
+  "completeness": 1.0,
+  "composite_min": 0.5,
+  "composite_max": 0.88,
+  "flags": [
+   "syntax_error"
+  ],
+  "level": null,
+  "allow_levels": [
+   "L3",
+   "L4"
+  ],
+  "author": "HanSishi",
+  "rationale": "附带的 .py 编译不过 → syntax_error(cap85) 且 E5 检查项不通过。"
+ },
+ "gold16_skill_package": {
+  "completeness": 1.0,
+  "composite_min": 0.8,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "author": "WeiShiqi",
+  "rationale": "可执行内容是真正的 `.skill`（tar.gz）包，而不是 .py。评审器必须能解开它、读到里面的 SKILL.md 并识别 frontmatter。"
+ },
+ "gold17_empty_folder": {
+  "expect_exit": 3,
+  "mode": "empty",
+  "author": "",
+  "rationale": "完全空的目录 → 应报「未找到任何文件」并以非零退出码结束，而不是假装评了 0 分。"
+ },
+ "gold18_no_demo_but_rich": {
+  "completeness": 0.8,
+  "composite_min": 0.6,
+  "composite_max": 0.88,
+  "flags": [
+   "missing_core"
+  ],
+  "level": "L3",
+  "allow_levels": [
+   "L2",
+   "L3"
+  ],
+  "author": "QinShiba",
+  "rationale": "内容质量很高但缺 demo → cap 75 把它压在 L3，**不应因为「写得好」就豁免硬性交付物要求**。"
+ },
+ "gold19_machine_prefix": {
+  "completeness": 1.0,
+  "composite_min": 0.85,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "n_authors": 1,
+  "author": "ShenShijiu",
+  "rationale": "`evidence/run_C4_self.txt` 的文件名符合 `前缀_C4_后缀`，会把作者识别成 `run` —— 实测踩到过。目录上下文必须优先于文件名模式，班级人数必须仍然是 1。"
+ },
+ "gold20_placeholder_ok": {
+  "completeness": 1.0,
+  "composite_min": 0.85,
+  "composite_max": 1.0,
+  "flags": [],
+  "level": "L4",
+  "author": "YouErshi",
+  "rationale": "演示目录里有一个有意的空占位文件（`占位.md`）。把它算成「交付物为空」会误伤一个干净的提交 —— 实测踩到过（ZhouYan05）。"
+ }
+}
